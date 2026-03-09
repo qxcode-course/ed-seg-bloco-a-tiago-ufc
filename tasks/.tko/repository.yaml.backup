@@ -1,14 +1,35 @@
 version: '0.2'
 sources:
-- database: local
-  link: ''
+- name: local
+  target: ''
   type: local
-  branch: null
-  cache_path: ''
-  cache_timestamp: ''
-  filters: null
-expanded: []
+  writeable: true
+  quests: null
+  tasks: null
+- name: ed
+  target: https://github.com/qxcodeed/arcade.git
+  type: git
+  writeable: false
+  cache_timestamp: '2026-03-09 18:40:15'
+  quests: null
+  tasks: null
+- name: sandbox
+  target: sandbox
+  type: local
+  writeable: true
+  quests: null
+  tasks: null
+expanded:
+- ed@main-quest
+- ed@análise
 tasks: {}
-flags: {}
+flags:
+  painel: 0
+  quests: 0
+  tracks: 0
+  tasks: 0
+  task_graph_mode: 0
+  show_time: 0
 lang: py
-selected: ''
+selected: ed@wiki/analise/analise.md
+next_draft_id: 0
