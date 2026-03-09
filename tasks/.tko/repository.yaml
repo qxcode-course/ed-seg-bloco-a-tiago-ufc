@@ -1,0 +1,21 @@
+version: '0.2'
+sources:
+- database: local
+  link: ''
+  type: local
+  branch: master
+  cache_path: ''
+  cache_timestamp: ''
+  filters: null
+- database: ed
+  link: https://github.com/qxcodeed/arcade.git
+  type: clone
+  branch: master
+  cache_path: ''
+  cache_timestamp: ''
+  filters: null
+expanded: []
+tasks: {}
+flags: {}
+lang: py
+selected: ''
