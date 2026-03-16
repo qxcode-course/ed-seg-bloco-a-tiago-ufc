@@ -1,0 +1,84 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-16_14-29-32",
+            "content": "@@ -52,20 +52,23 @@\n ) %7B%0A\n-%09var\n+    int\n  a, b, c\n  flo\n@@ -67,16 +67,8 @@\n b, c\n- float64\n %0A%09fm\n@@ -119,17 +119,17 @@\n c) / 3%0A%09\n-A\n+a\n  := p * \n@@ -142,16 +142,17 @@\n Sqrt\n+2\n ((p - a)\n  * (\n@@ -151,21 +151,15 @@\n - a)\n- * \n (p - b)\n- * \n (p -\n@@ -181,9 +181,9 @@\n tln(\n-A\n+a\n )%0A%7D%0A\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-03-16_14-32-03",
+            "content": "@@ -96,17 +96,14 @@\n f%22, \n-&\n a, \n-&\n b, \n-&\n c)%0A%09\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-03-16_14-34-35",
+            "content": "@@ -136,16 +136,17 @@\n  := p * \n+(\n math.Sqr\n@@ -153,22 +153,33 @@\n t((p\n--a)*(p-b)*(p-c\n+ - a) * (p - b) * (p - c)\n ))%0A%09\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-03-16_14-35-13",
+            "content": "@@ -69,17 +69,16 @@\n float64%0A\n-%0A\n %09fmt.Sca\n@@ -104,17 +104,16 @@\n &b, &c)%0A\n-%0A\n %09p := (a\n@@ -128,81 +128,49 @@\n ) / \n-2 // semiper%C3%ADmetro%0A%0A%09area := math.Sqrt(p * (p - a) * (p - b) * (p - \n+3%0A%09A := p * math.Sqrt((p-a)*(p-b)*(p-\n c))%0A\n-%0A\n %09fmt\n@@ -182,12 +182,9 @@\n tln(\n-area\n+A\n )%0A%7D%0A\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-03-16_14-37-41",
+            "content": "@@ -69,16 +69,17 @@\n float64%0A\n+%0A\n %09fmt.Sca\n@@ -105,16 +105,17 @@\n &b, &c)%0A\n+%0A\n %09p := (a\n@@ -130,49 +130,81 @@\n ) / \n-3%0A%09A := p * math.Sqrt((p-a)*(p-b)*(p-\n+2 // semiper%C3%ADmetro%0A%0A%09area := math.Sqrt(p * (p - a) * (p - b) * (p - \n c))%0A\n+%0A\n %09fmt\n@@ -216,9 +216,12 @@\n tln(\n-A\n+area\n )%0A%7D%0A\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-03-16_14-37-52",
+            "content": "@@ -175,14 +175,16 @@\n mt.Print\n+ln\n (A)%0A%7D%0A\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-03-16_14-38-29",
+            "content": "@@ -179,16 +179,9 @@\n rint\n-f(%22%25s%22, \n+(\n A)%0A%7D\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-03-16_14-39-19",
+            "content": "@@ -179,17 +179,17 @@\n rintf(%22%25\n-f\n+s\n %22, A)%0A%7D%0A\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-03-16_14-40-03",
+            "content": "@@ -184,10 +184,8 @@\n (%22%25f\n-%5Cn\n %22, A\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-03-16_14-42-47",
+            "content": "@@ -78,17 +78,30 @@\n fmt.Scan\n-(\n+f(%22%25f %25f %25f%22, \n &a, &b, \n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-03-16_15-10-55",
+            "content": "@@ -162,14 +162,23 @@\n mt.Print\n-(\n+f(%22%25f%5Cn%22, \n A)%0A%7D%0A\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-03-16_15-11-13",
+            "content": "@@ -115,9 +115,9 @@\n ) / \n-2\n+3\n %0A%09A \n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-03-16_15-12-41",
+            "content": "@@ -118,16 +118,20 @@\n  2%0A%09A :=\n+ p *\n  math.Sq\n@@ -137,37 +137,23 @@\n qrt(\n-p * (p - a) * (p - b) * (p - \n+(p-a)*(p-b)*(p-\n c))%0A\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-03-16_15-13-26",
+            "content": "@@ -176,18 +176,9 @@\n rint\n-f(%22%25.2f%22, \n+(\n A)%0A%7D\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-03-16_15-13-43",
+            "content": "@@ -183,10 +183,8 @@\n %25.2f\n-%5Cn\n %22, A\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-03-16_15-14-15",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math\"\n)\n\nfunc main() {\n\tvar a, b, c float64\n\tfmt.Scan(&a, &b, &c)\n\tp := (a + b + c) / 2\n\tA := math.Sqrt(p * (p - a) * (p - b) * (p - c))\n\tfmt.Printf(\"%.2f\\n\", A)\n}\n",
+            "lines": "14"
+        }
+    ]
+}
