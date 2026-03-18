@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-17_16-30-41",
+            "content": "@@ -11,22 +11,8 @@\n in%0A%0A\n-import %22fmt%22%0A%0A\n func\n@@ -21,17 +21,20 @@\n ain() %7B%0A\n-%09\n+    \n qtd_albu\n@@ -38,29 +38,32 @@\n lbum\n- \n :=\n- \n 0%0A\n-%09\n+    \n qtd_fig\n- \n := 0%0A\n-%09\n+    \n fmt.\n@@ -150,17 +150,20 @@\n t%5Dbool)%0A\n-%09\n+    \n repetido\n@@ -191,17 +191,20 @@\n td_fig)%0A\n-%09\n+    \n for i :=\n@@ -218,18 +218,24 @@\n album %7B%0A\n-%09%09\n+        \n fmt.Scan\n@@ -249,24 +249,36 @@\n %5Bi%5D)\n-%0A%09%7D%0A%09\n+        %0A    %7D%0A    \n for\n- \n _, fig\n- \n := r\n@@ -287,21 +287,26 @@\n ge album\n- \n %7B%0A\n-%09%09\n+        \n if unico\n@@ -314,19 +314,28 @@\n %5Bfig%5D %7B%0A\n-%09%09%09\n+            \n repetido\n@@ -364,50 +364,89 @@\n fig)\n-%0A%09%09%7D else %7B%0A%09%09%09unicos%5Bfig%5D = true%0A%09%09%7D%0A%09%7D%0A%09\n+            %0A        %7D else %7B%0A            unicos%5Bfig%5D = true%0A        %7D%0A    %7D%0A    \n for \n@@ -475,18 +475,24 @@\n tidos %7B%0A\n-%09%09\n+        \n if i != \n@@ -495,19 +495,28 @@\n  != 0 %7B%0A\n-%09%09%09\n+            \n fmt.Prin\n@@ -522,18 +522,24 @@\n nt(%22 %22)%0A\n-%09%09\n+        \n %7D else %7B\n@@ -539,19 +539,28 @@\n  else %7B%0A\n-%09%09%09\n+            \n fmt.Prin\n@@ -571,24 +571,36 @@\n %25v%22, i)%0A\n-%09%09%7D%0A%09%7D%0A%09\n+        %7D%0A    %7D%0A    \n for i :=\n@@ -624,18 +624,24 @@\n ; i++ %7B%0A\n-%09%09\n+        \n if !unic\n@@ -649,14 +649,22 @@\n s%5Bi%5D\n- \n %7B%0A\n-%09%09%09\n+            \n fmt.\n@@ -676,11 +676,20 @@\n (i)%0A\n-%09%09%09\n+            \n fmt.\n@@ -703,16 +703,28 @@\n  %22)%0A\n-%09%09%7D%0A%09%7D%0A%09\n+        %7D%0A    %7D%0A    \n prin\n@@ -735,17 +735,20 @@\n unicos)%0A\n-%09\n+    \n println(\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-17_16-31-10",
+            "content": "@@ -469,21 +469,17 @@\n f(%22%25v%22, \n-valor\n+i\n )%0A%09%09%7D%0A%09%7D\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-17_16-31-44",
+            "content": "@@ -487,21 +487,8 @@\n %0A%09%7D%0A\n-%09saida := %22%22%0A\n %09for\n@@ -542,70 +542,22 @@\n %0A%09%09%09\n-saida = \n fmt.\n-Sp\n+P\n rint\n-f(saida, %22%25v %22, i)%0A%09%09%7D%0A%09%7D%0A%09if saida == %22%22 %7B%0A\n+(i)%0A%09\n %09%09fm\n@@ -567,64 +567,17 @@\n rint\n-ln\n (%22\n-N\n+ \n %22)%0A%09\n+%09\n %7D\n- else %7B%0A%09%09fmt.Println(saida%5B0 : len(saida)-1%5D)\n %0A%09%7D%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-17_16-34-36",
+            "content": "@@ -557,17 +557,16 @@\n %09%09saida \n-+\n = fmt.Sp\n@@ -571,16 +571,23 @@\n Sprintf(\n+saida, \n %22%25v %22, i\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-17_16-36-48",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tqtd_album := 0\n\tqtd_fig := 0\n\tfmt.Scan(&qtd_album, &qtd_fig)\n\talbum := make([]int, qtd_fig)\n\tunicos := make(map[int]bool)\n\trepetidos := make([]int, 0, qtd_fig)\n\tfor i := range album {\n\t\tfmt.Scan(&album[i])\n\t}\n\tfor _, fig := range album {\n\t\tif unicos[fig] {\n\t\t\trepetidos = append(repetidos, fig)\n\t\t} else {\n\t\t\tunicos[fig] = true\n\t\t}\n\t}\n\tfor i, valor := range repetidos {\n\t\tif i != 0 {\n\t\t\tfmt.Print(\" \")\n\t\t} else {\n\t\t\tfmt.Printf(\"%v\", valor)\n\t\t}\n\t}\n\tsaida := \"\"\n\tfor i := 1; i < qtd_album; i++ {\n\t\tif !unicos[i] {\n\t\t\tsaida += fmt.Sprintf(\"%v \", i)\n\t\t}\n\t}\n\tif saida == \"\" {\n\t\tfmt.Println(\"N\")\n\t} else {\n\t\tfmt.Println(saida[0 : len(saida)-1])\n\t}\n\tprintln(unicos)\n\tprintln(repetidos)\n}\n",
+            "lines": "42"
+        }
+    ]
+}

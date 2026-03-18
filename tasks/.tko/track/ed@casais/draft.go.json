@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-17_16-09-27",
+            "content": "@@ -81,20 +81,8 @@\n = 0%0A\n-%09pares := 0%0A\n %09fmt\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-03-17_16-10-03",
+            "content": "@@ -308,24 +308,6 @@\n %0A%09%7D%0A\n-%09fmt.Println(qtd)%0A\n %7D%0A\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-17_16-17-34",
+            "content": "@@ -317,17 +317,15 @@\n Println(\n-pares\n+qtd\n )%0A%7D%0A\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-17_16-17-45",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tsolteiros := make(map[int]int)\n\tqtd := 0\n\tpares := 0\n\tfmt.Scan(&qtd)\n\tfor range qtd {\n\t\tanimal := 0\n\t\tfmt.Scan(&animal)\n\t\tqtd, existe := solteiros[-animal]\n\t\tif existe && qtd > 0 {\n\t\t\tsolteiros[-animal] = qtd - 1\n\t\t\tpares += 1\n\t\t} else {\n\t\t\tsolteiros[animal]++\n\t\t}\n\t}\n\tfmt.Println(pares)\n}\n",
+            "lines": "22"
+        }
+    ]
+}
