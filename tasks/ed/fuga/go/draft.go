@@ -13,7 +13,7 @@ func main() {
 	PF = P - F
 
 	if D < 1 {
-		
+
 	}
 
 	fmt.Println("S")
