@@ -1,0 +1,20 @@
+2026-03-22 21:37:12, MOVE, v:1, k:ed@fuga, mode:PICK
+2026-03-22 21:37:14, EXEC, v:1, k:ed@fuga, mode:FREE, size:21
+2026-03-22 21:37:44, MOVE, v:1, k:ed@fuga, mode:PICK
+2026-03-22 21:37:50, MOVE, v:1, k:ed@fuga, mode:BACK
+2026-03-22 21:37:53, MOVE, v:1, k:ed@gomos, mode:DOWN
+2026-03-22 21:38:04, MOVE, v:1, k:ed@gomos, mode:PICK
+2026-03-22 21:38:07, EXEC, v:1, k:ed@gomos, mode:FREE, size:5
+2026-03-22 21:39:22, MOVE, v:1, k:ed@gomos, mode:PICK
+2026-03-22 21:50:04, MOVE, v:1, k:ed@gomos, mode:BACK
+2026-03-22 21:50:12, MOVE, v:1, k:ed@casais, mode:PICK
+2026-03-22 21:50:13, EXEC, v:1, k:ed@casais, mode:FREE
+2026-03-22 21:50:31, MOVE, v:1, k:ed@casais, mode:BACK
+2026-03-22 21:50:34, MOVE, v:1, k:ed@casais, mode:PICK
+2026-03-22 22:01:59, MOVE, v:1, k:ed@casais, mode:BACK
+2026-03-22 22:02:12, MOVE, v:1, k:ed@gomos, mode:PICK
+2026-03-22 22:02:13, EXEC, v:1, k:ed@gomos, mode:FREE, size:7
+2026-03-22 22:07:47, MOVE, v:1, k:ed@gomos, mode:BACK
+2026-03-22 22:07:52, MOVE, v:1, k:ed@fuga, mode:PICK
+2026-03-22 22:07:53, EXEC, v:1, k:ed@fuga, mode:FREE
+2026-03-22 22:54:48, MOVE, v:1, k:ed@fuga, mode:BACK

@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-22_21-37-14",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar H int\n\tvar P int\n\tvar F int\n\tvar D int\n\tfmt.Scanf(\"%d %d %d %d\", &H, &P, &F, &D)\n\n\tPH = P - H\n\tPF = P - F\n\n\tif D < 1 {\n\n\t}\n\n\tfmt.Println(\"S\")\n\tfmt.Println(\"N\")\n}\n",
+            "lines": "21"
+        }
+    ]
+}

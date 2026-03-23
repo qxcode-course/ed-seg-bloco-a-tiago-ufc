@@ -13,8 +13,8 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@revisão
 - sandbox@student_sandbox_alias:00_rascunhos
+- ed@revisão
 - ed@main-quest
 tasks:
   ed@pintando: '{self:1, rate:100, study:30, friend:N}'
@@ -28,4 +28,4 @@ flags:
   task_graph_mode: 0
   show_time: 0
 lang: go
-selected: ed@main-quest
+selected: ed@baruel
