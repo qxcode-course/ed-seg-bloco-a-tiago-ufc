@@ -3,41 +3,55 @@ package main
 import "fmt"
 
 func main() {
-	qtd_album := 0
-	qtd_fig := 0
-	fmt.Scan(&qtd_album, &qtd_fig)
-	album := make([]int, qtd_fig)
-	unicos := make(map[int]bool)
-	repetidos := make([]int, 0, qtd_fig)
-	for i := range album {
-		fmt.Scan(&album[i])
+	var qtdAlbum, qtdFig int
+	fmt.Scan(&qtdAlbum)
+	fmt.Scan(&qtdFig)
+
+	figs := make([]int, qtdFig)
+	unicos := make(map[int]int) // conta quantas vezes aparece
+
+	repetidos := []int{}
+	for i := 0; i < qtdFig; i++ {
+		fmt.Scan(&figs[i])
+		unicos[figs[i]]++
 	}
-	for _, fig := range album {
-		if unicos[fig] {
-			repetidos = append(repetidos, fig)
-		} else {
-			unicos[fig] = true
+
+	// Repetidos
+	for fig, count := range unicos {
+		if count > 1 {
+			for i := 1; i < count; i++ {
+				repetidos = append(repetidos, fig)
+			}
 		}
 	}
-	for i, valor := range repetidos {
-		if i != 0 {
-			fmt.Print(" ")
-		} else {
-			fmt.Printf("%v", valor)
-		}
-	}
-	fmt.Println()
-	saida := ""
-	for i := 1; i < qtd_album; i++ {
-		if !unicos[i] {
-			saida += fmt.Sprintf("%v ", i)
-		}
-	}
-	if saida == "" {
+	if len(repetidos) == 0 {
 		fmt.Println("N")
 	} else {
-		fmt.Println(saida[0 : len(saida)-1])
+		for i, v := range repetidos {
+			if i > 0 {
+				fmt.Print(" ")
+			}
+			fmt.Print(v)
+		}
+		fmt.Println()
 	}
-	println(unicos)
-	println(repetidos)
+
+	// Faltantes
+	faltando := []int{}
+	for i := 1; i <= qtdAlbum; i++ {
+		if unicos[i] == 0 {
+			faltando = append(faltando, i)
+		}
+	}
+	if len(faltando) == 0 {
+		fmt.Println("N")
+	} else {
+		for i, v := range faltando {
+			if i > 0 {
+				fmt.Print(" ")
+			}
+			fmt.Print(v)
+		}
+		fmt.Println()
+	}
 }

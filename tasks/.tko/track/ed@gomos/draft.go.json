@@ -7,8 +7,43 @@
         },
         {
             "label": "2026-03-22_22-02-13",
-            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tfmt.Println(\"Hello, World!\")\n}\n",
+            "content": "@@ -65,11 +65,10 @@\n orld!%22)%0A\n-%0A\n %7D%0A\n",
             "lines": "7"
+        },
+        {
+            "label": "2026-03-22_23-31-53",
+            "content": "@@ -53,25 +53,21 @@\n ln(%22\n-%22)%0A%09fmt.Println(%22\n+Hello, World!\n %22)%0A%0A\n",
+            "lines": "8"
+        },
+        {
+            "label": "2026-03-22_23-33-14",
+            "content": "@@ -40,441 +40,40 @@\n  %7B%0A%09\n-var Q int%0A%09var D byte%0A%09fmt.Scan(&Q, &D)%0A%0A%09x := make(%5B%5Dint, Q)%0A%09y := make(%5B%5Dint, Q)%0A%0A%09for i := 0; i %3C Q; i++ %7B%0A%09%09fmt.Scan(&x%5Bi%5D, &y%5Bi%5D)%0A%09%7D%0A%09prevX, prevY := x%5B0%5D, y%5B0%5D%0A%0A%09switch D %7B%0A%09case 'L':%0A%09%09x%5B0%5D--%0A%09case 'R':%0A%09%09x%5B0%5D++%0A%09case 'U':%0A%09%09y%5B0%5D--%0A%09case 'D':%0A%09%09y%5B0%5D++%0A%09%7D%0A%0A%09for i := 1; i %3C Q; i++ %7B%0A%09%09tempX, tempY := x%5Bi%5D, y%5Bi%5D%0A%09%09x%5Bi%5D, y%5Bi%5D = prevX, prevY%0A%09%09prevX, prevY = tempX, tempY%0A%09%7D%0A%0A%09for i := 0; i %3C Q; i++ %7B%0A%09%09fmt.Println(x%5Bi%5D, y%5Bi%5D)%0A%09%7D\n+fmt.Println(%22%22)%0A%09fmt.Println(%22%22)%0A\n %0A%7D%0A\n",
+            "lines": "9"
+        },
+        {
+            "label": "2026-03-22_23-34-02",
+            "content": "@@ -174,17 +174,16 @@\n %5Bi%5D)%0A%09%7D%0A\n-%0A\n %09prevX, \n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-22_23-37-24",
+            "content": "@@ -76,16 +76,17 @@\n &Q, &D)%0A\n+%0A\n %09x := ma\n@@ -177,20 +177,26 @@\n )%0A%09%7D%0A%0A%09p\n+rev\n X, p\n+rev\n Y := x%5B0\n@@ -375,21 +375,33 @@\n  = p\n+rev\n X, p\n+rev\n Y%0A%09%09p\n+rev\n X, p\n+rev\n Y = \n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-03-22_23-46-25",
+            "content": "@@ -71,27 +71,17 @@\n Scan\n-f(%22%25d %25c%22, \n+(\n &Q, &D)%0A\n %0A%09x \n@@ -76,17 +76,16 @@\n &Q, &D)%0A\n-%0A\n %09x := ma\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-22_23-47-55",
+            "content": "@@ -58,17 +58,16 @@\n  D byte%0A\n-%0A\n %09fmt.Sca\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-03-22_23-52-08",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar Q int\n\tvar D byte\n\n\tfmt.Scanf(\"%d %c\", &Q, &D)\n\n\tx := make([]int, Q)\n\ty := make([]int, Q)\n\n\tfor i := 0; i < Q; i++ {\n\t\tfmt.Scan(&x[i], &y[i])\n\t}\n\n\tpX, pY := x[0], y[0]\n\n\tswitch D {\n\tcase 'L':\n\t\tx[0]--\n\tcase 'R':\n\t\tx[0]++\n\tcase 'U':\n\t\ty[0]--\n\tcase 'D':\n\t\ty[0]++\n\t}\n\n\tfor i := 1; i < Q; i++ {\n\t\ttempX, tempY := x[i], y[i]\n\t\tx[i], y[i] = pX, pY\n\t\tpX, pY = tempX, tempY\n\t}\n\n\tfor i := 0; i < Q; i++ {\n\t\tfmt.Println(x[i], y[i])\n\t}\n}\n",
+            "lines": "40"
         }
     ]
 }

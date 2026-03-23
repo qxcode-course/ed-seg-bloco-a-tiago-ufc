@@ -3,19 +3,18 @@ package main
 import "fmt"
 
 func main() {
-	var H int
-	var P int
-	var F int
-	var D int
+	var H, P, F, D int
 	fmt.Scanf("%d %d %d %d", &H, &P, &F, &D)
-
-	PH = P - H
-	PF = P - F
-
-	if D < 1 {
-
+	pos := F
+	for {
+		pos = (pos + D + 16) % 16
+		if pos == H {
+			fmt.Println("S")
+			return
+		}
+		if pos == P {
+			fmt.Println("N")
+			return
+		}
 	}
-
-	fmt.Println("S")
-	fmt.Println("N")
 }

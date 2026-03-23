@@ -2,8 +2,13 @@
     "patches": [
         {
             "label": "2026-03-22_21-37-14",
-            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar H int\n\tvar P int\n\tvar F int\n\tvar D int\n\tfmt.Scanf(\"%d %d %d %d\", &H, &P, &F, &D)\n\n\tPH = P - H\n\tPF = P - F\n\n\tif D < 1 {\n\n\t}\n\n\tfmt.Println(\"S\")\n\tfmt.Println(\"N\")\n}\n",
+            "content": "@@ -45,15 +45,39 @@\n ar H\n-, P, F,\n+ int%0A%09var P int%0A%09var F int%0A%09var\n  D i\n@@ -125,154 +125,85 @@\n &D)%0A\n-%09pos := F%0A%09for %7B%0A%09%09pos = (pos + D + 16) %25 16%0A%09%09if pos == H %7B%0A%09%09%09fmt.Println(%22S%22)%0A%09%09%09return%0A%09%09%7D%0A%09%09if pos == P %7B%0A%09%09%09fmt.Println(%22N%22)%0A%09%09%09return%0A%09%09%7D%0A%09%7D\n+%0A%09PH = P - H%0A%09PF = P - F%0A%0A%09if D %3C 1 %7B%0A%0A%09%7D%0A%0A%09fmt.Println(%22S%22)%0A%09fmt.Println(%22N%22)\n %0A%7D%0A\n",
             "lines": "21"
+        },
+        {
+            "label": "2026-03-22_23-24-01",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar H, P, F, D int\n\tfmt.Scanf(\"%d %d %d %d\", &H, &P, &F, &D)\n\tpos := F\n\tfor {\n\t\tpos = (pos + D + 16) % 16\n\t\tif pos == H {\n\t\t\tfmt.Println(\"S\")\n\t\t\treturn\n\t\t}\n\t\tif pos == P {\n\t\t\tfmt.Println(\"N\")\n\t\t\treturn\n\t\t}\n\t}\n}\n",
+            "lines": "20"
         }
     ]
 }

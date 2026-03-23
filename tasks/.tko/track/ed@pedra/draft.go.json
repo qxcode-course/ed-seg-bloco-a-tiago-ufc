@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-22_23-26-42",
+            "content": "@@ -11,267 +11,189 @@\n in%0A%0A\n-import (%0A%09%22fmt%22%0A%09%22math%22%0A)%0A%0Atype Jogada struct %7B%0A%09A int%0A%09B int%0A%7D%0A%0Afunc main() %7B%0A%09var N int%0A%09fmt.Scan(&N)%0A%09jogadas := make(%5B%5DJogada, N)%0A%09for i := 0; i %3C N; i++ %7B%0A%09%09fmt.Scan(&jogadas%5Bi%5D.A, &jogadas%5Bi%5D.B)%0A%09%7D%0A%09melhorIndice := -1%0A%09melhorValor := math.MaxInt32%0A%09\n+Struct jogadas %7B%0A%0A%7D%0A%0Afunc main() %7B%0A%09qtd := 0%0A%09jogadas := make(%5B%5DJogada, qtd)%0A    for _, jog := range jogadas %7B%0A        fmt.Scan(&jog.pa, &jog.pb)%0A    %7D%0A    valor_melhor := 0%0A    \n for\n- \n i, j\n@@ -218,40 +218,25 @@\n s %7B%0A\n-%09%09// Desclassifica%C3%A7%C3%A3o%0A%09%09\n+        \n if jog.\n-A\n+pa\n  %3C 1\n@@ -248,17 +248,18 @@\n jog.\n-B\n+pb\n  %3C 10 %7B%0A\n %09%09%09c\n@@ -258,241 +258,74 @@\n 0 %7B%0A\n-%09%09%09continue%0A%09%09%7D%0A%09%09diff := int(math.Abs(float64(jog.A - jog.B)))%0A%09%09if diff %3C melhorValor %7B%0A%09%09%09melhorValor = diff%0A%09%09%09melhorIndice = i%0A%09%09%7D%0A%09%7D%0A%09if melhorIndice == -1 %7B%0A%09%09fmt.Println(%22sem ganhador%22)%0A%09%7D else %7B%0A%09%09fmt.Println(melhorIndice)%0A%09%7D\n+            continue%0A        %7D else %7B%0A            %0A        %7D%0A    %7D%0A\n %0A%7D%0A\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-22_23-27-57",
+            "content": "@@ -292,16 +292,38 @@\n gadas %7B%0A\n+%09%09// Desclassifica%C3%A7%C3%A3o%0A\n %09%09if jog\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-22_23-28-24",
+            "content": "@@ -542,15 +542,27 @@\n Println(\n+melhorIndice\n )%0A%09%7D%0A%7D%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-22_23-28-34",
+            "content": "@@ -542,27 +542,15 @@\n Println(\n-melhorIndice\n )%0A%09%7D%0A%7D%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-22_23-28-50",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math\"\n)\n\ntype Jogada struct {\n\tA int\n\tB int\n}\n\nfunc main() {\n\tvar N int\n\tfmt.Scan(&N)\n\tjogadas := make([]Jogada, N)\n\tfor i := 0; i < N; i++ {\n\t\tfmt.Scan(&jogadas[i].A, &jogadas[i].B)\n\t}\n\tmelhorIndice := -1\n\tmelhorValor := math.MaxInt32\n\tfor i, jog := range jogadas {\n\t\tif jog.A < 10 || jog.B < 10 {\n\t\t\tcontinue\n\t\t}\n\t\tdiff := int(math.Abs(float64(jog.A - jog.B)))\n\t\tif diff < melhorValor {\n\t\t\tmelhorValor = diff\n\t\t\tmelhorIndice = i\n\t\t}\n\t}\n\tif melhorIndice == -1 {\n\t\tfmt.Println(\"sem ganhador\")\n\t} else {\n\t\tfmt.Println(melhorIndice)\n\t}\n}\n",
+            "lines": "37"
+        }
+    ]
+}

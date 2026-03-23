@@ -22,8 +22,28 @@
         },
         {
             "label": "2026-03-17_16-36-48",
-            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tqtd_album := 0\n\tqtd_fig := 0\n\tfmt.Scan(&qtd_album, &qtd_fig)\n\talbum := make([]int, qtd_fig)\n\tunicos := make(map[int]bool)\n\trepetidos := make([]int, 0, qtd_fig)\n\tfor i := range album {\n\t\tfmt.Scan(&album[i])\n\t}\n\tfor _, fig := range album {\n\t\tif unicos[fig] {\n\t\t\trepetidos = append(repetidos, fig)\n\t\t} else {\n\t\t\tunicos[fig] = true\n\t\t}\n\t}\n\tfor i, valor := range repetidos {\n\t\tif i != 0 {\n\t\t\tfmt.Print(\" \")\n\t\t} else {\n\t\t\tfmt.Printf(\"%v\", valor)\n\t\t}\n\t}\n\tsaida := \"\"\n\tfor i := 1; i < qtd_album; i++ {\n\t\tif !unicos[i] {\n\t\t\tsaida += fmt.Sprintf(\"%v \", i)\n\t\t}\n\t}\n\tif saida == \"\" {\n\t\tfmt.Println(\"N\")\n\t} else {\n\t\tfmt.Println(saida[0 : len(saida)-1])\n\t}\n\tprintln(unicos)\n\tprintln(repetidos)\n}\n",
+            "content": "@@ -487,23 +487,8 @@\n %0A%09%7D%0A\n-%09fmt.Println()%0A\n %09sai\n",
             "lines": "42"
+        },
+        {
+            "label": "2026-03-22_23-29-52",
+            "content": "@@ -40,32 +40,36 @@\n  %7B%0A%09\n-var \n qtd\n-A\n+_a\n lbum\n-,\n  \n+:= 0%0A%09\n qtd\n-Fig int\n+_fig := 0\n %0A%09fm\n@@ -83,39 +83,32 @@\n &qtd\n-A\n+_a\n lbum\n-)%0A%09fmt.Scan(\n+, \n &qtd\n-F\n+_f\n ig)%0A%09\n-figs\n+album\n  := \n@@ -122,17 +122,18 @@\n int, qtd\n-F\n+_f\n ig)%0A%09uni\n@@ -156,94 +156,73 @@\n int%5D\n-int) // conta quantas vezes aparece%0A%09repetidos := %5B%5Dint%7B%7D%0A%09for i := 0; i %3C qtdFig; i++\n+bool)%0A%09repetidos := make(%5B%5Dint, 0, qtd_fig)%0A%09for i := range album\n  %7B%0A%09\n@@ -236,79 +236,32 @@\n an(&\n-figs\n+album\n %5Bi%5D)%0A%09\n-%09unicos%5Bfigs%5Bi%5D%5D++%0A%09%7D%0A%09// Encontrar repetidos%0A%09for fig, count\n+%7D%0A%09for _, fig\n  := \n@@ -270,22 +270,21 @@\n nge \n-unicos\n+album\n  %7B%0A%09%09if \n coun\n@@ -283,53 +283,22 @@\n %09if \n-count %3E 1 %7B%0A%09%09%09for i := 1; i %3C count; i++\n+unicos%5Bfig%5D\n  %7B%0A\n-%09\n %09%09%09r\n@@ -337,97 +337,46 @@\n )%0A%09%09\n-%09%7D%0A%09%09%7D%0A%09%7D%0A%09// Imprimir repetidos%0A%09if len(repetidos) == 0 %7B%0A%09%09fmt.Println(%22N%22)%0A%09%7D else %7B%0A%09\n+%7D else %7B%0A%09%09%09unicos%5Bfig%5D = true%0A%09%09%7D%0A%09%7D%0A\n %09for\n@@ -372,32 +372,36 @@\n %09%09%7D%0A%09%7D%0A%09for i, v\n+alor\n  := range repeti\n@@ -404,37 +404,36 @@\n petidos %7B%0A%09%09\n-%09\n if i \n-%3E\n+!=\n  0 %7B%0A\n-%09\n %09%09%09fmt.Print\n@@ -432,34 +432,40 @@\n mt.Print(%22 %22)%0A%09%09\n-%09\n %7D\n+ else %7B\n %0A%09%09%09fmt.Print(v)\n@@ -457,33 +457,46 @@\n %09%09%09fmt.Print\n-(v\n+f(%22%25v%22, valor\n )%0A%09%09%7D%0A%09\n+%7D%0A\n %09fmt.Println\n@@ -503,54 +503,19 @@\n ()%0A%09\n-%7D%0A%09// Encontrar faltantes%0A%09faltando := %5B%5Dint%7B%7D\n+saida := %22%22\n %0A%09fo\n@@ -531,14 +531,14 @@\n  i %3C\n-=\n  qtd\n-A\n+_a\n lbum\n@@ -546,24 +546,25 @@\n  i++ %7B%0A%09%09if \n+!\n unicos%5Bi%5D ==\n@@ -564,102 +564,67 @@\n s%5Bi%5D\n- == 0\n  %7B%0A%09%09%09\n-faltando = append(faltando, i)%0A%09%09%7D%0A%09%7D%0A%09// Imprimir faltantes%0A%09if len(faltando)\n+saida += fmt.Sprintf(%22%25v %22, i)%0A%09%09%7D%0A%09%7D%0A%09if saida\n  == \n-0\n+%22%22\n  %7B%0A%09\n@@ -658,111 +658,82 @@\n %0A%09%09f\n-or i, v := range faltando %7B%0A%09%09%09if i %3E 0 %7B%0A%09%09%09%09fmt.Print(%22 %22\n+mt.Println(saida%5B0 : len(saida)-1%5D\n )%0A\n-%09%09\n %09%7D%0A%09\n-%09%09fmt.Print(v)%0A%09%09%7D%0A%09%09fmt.Println()%0A%09%7D\n+println(unicos)%0A%09println(repetidos)\n %0A%7D%0A\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-03-22_23-30-37",
+            "content": "@@ -915,9 +915,8 @@\n nt(%22\n-x\n  %22)%0A\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-03-22_23-30-56",
+            "content": "@@ -101,17 +101,16 @@\n qtdFig)%0A\n-%0A\n %09figs :=\n@@ -190,17 +190,16 @@\n aparece%0A\n-%0A\n %09repetid\n@@ -291,14 +291,23 @@\n %0A%09%7D%0A\n-%0A\n %09// \n-R\n+Encontrar r\n epet\n@@ -437,32 +437,55 @@\n ig)%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A\n+%09// Imprimir repetidos%0A\n %09if len(repetido\n@@ -636,14 +636,23 @@\n %0A%09%7D%0A\n-%0A\n %09// \n-F\n+Encontrar f\n alta\n@@ -774,16 +774,39 @@\n %0A%09%09%7D%0A%09%7D%0A\n+%09// Imprimir faltantes%0A\n %09if len(\n@@ -888,32 +888,32 @@\n %7B%0A%09%09%09if i %3E 0 %7B%0A\n-\n %09%09%09%09fmt.Print(%22 \n@@ -903,32 +903,33 @@\n %0A%09%09%09%09fmt.Print(%22\n+x\n  %22)%0A%09%09%09%7D%0A%09%09%09fmt.\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-03-22_23-31-44",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar qtdAlbum, qtdFig int\n\tfmt.Scan(&qtdAlbum)\n\tfmt.Scan(&qtdFig)\n\n\tfigs := make([]int, qtdFig)\n\tunicos := make(map[int]int) // conta quantas vezes aparece\n\n\trepetidos := []int{}\n\tfor i := 0; i < qtdFig; i++ {\n\t\tfmt.Scan(&figs[i])\n\t\tunicos[figs[i]]++\n\t}\n\n\t// Repetidos\n\tfor fig, count := range unicos {\n\t\tif count > 1 {\n\t\t\tfor i := 1; i < count; i++ {\n\t\t\t\trepetidos = append(repetidos, fig)\n\t\t\t}\n\t\t}\n\t}\n\tif len(repetidos) == 0 {\n\t\tfmt.Println(\"N\")\n\t} else {\n\t\tfor i, v := range repetidos {\n\t\t\tif i > 0 {\n\t\t\t\tfmt.Print(\" \")\n\t\t\t}\n\t\t\tfmt.Print(v)\n\t\t}\n\t\tfmt.Println()\n\t}\n\n\t// Faltantes\n\tfaltando := []int{}\n\tfor i := 1; i <= qtdAlbum; i++ {\n\t\tif unicos[i] == 0 {\n\t\t\tfaltando = append(faltando, i)\n\t\t}\n\t}\n\tif len(faltando) == 0 {\n\t\tfmt.Println(\"N\")\n\t} else {\n\t\tfor i, v := range faltando {\n\t\t\tif i > 0 {\n\t\t\t\tfmt.Print(\" \")\n\t\t\t}\n\t\t\tfmt.Print(v)\n\t\t}\n\t\tfmt.Println()\n\t}\n}\n",
+            "lines": "57"
         }
     ]
 }
