@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-23_16-25-14",
+            "content": "@@ -109,12 +109,12 @@\n f(%22%25\n-d %25d\n+s %25s\n %22, N\n",
+            "lines": "10"
+        },
+        {
+            "label": "2026-03-23_16-25-45",
+            "content": "@@ -30,394 +30,26 @@\n unc \n-prox_vivo(elementos %5B%5Dint, pos int) int %7B%0A%09size := len(elementos)%0A%09for %7B%0A%09%09pos = (pos + 1) %25 size%0A%09%09if elementos%5Bpos%5D != 0 %7B%0A%09%09%09return pos%0A%09%09%7D%0A%09%7D%0A%7D%0A%0Afunc executar(elementos %5B%5Dint, pos int) int %7B%0A%09vivos := len(elementos)%0A%09for vivos %3E 1 %7B%0A%09%09alvo := prox_vivo(elementos, pos)%0A%09%09elementos%5Balvo%5D = 0%0A%09%09vivos--%0A%09%09pos = prox_vivo(elementos, alvo)%0A%09%7D%0A%09return pos%0A%7D%0A%0Afunc main() %7B%0A%09var size, pos\n+main() %7B%0A%09var N, E\n  int\n@@ -67,20 +67,17 @@\n (%22%25d%22, &\n-size\n+N\n )%0A%09fmt.S\n@@ -92,167 +92,36 @@\n %22, &\n-pos)%0A%09elementos := make(%5B%5Dint, size)%0A%09for i := 0; i %3C size; i++ %7B%0A%09%09elementos%5Bi%5D = i + 1%0A%09%7D%0A%09sobrevivente := executar(elementos, pos)%0A%09fmt.Println(sobrevivente\n+E)%0A%09fmt.Printf(%22%25d %25d%22, N, E\n )%0A%7D%0A\n",
+            "lines": "10"
+        },
+        {
+            "label": "2026-03-30_15-51-38",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc prox_vivo(elementos []int, pos int) int {\n\tsize := len(elementos)\n\tfor {\n\t\tpos = (pos + 1) % size\n\t\tif elementos[pos] != 0 {\n\t\t\treturn pos\n\t\t}\n\t}\n}\n\nfunc executar(elementos []int, pos int) int {\n\tvivos := len(elementos)\n\tfor vivos > 1 {\n\t\talvo := prox_vivo(elementos, pos)\n\t\telementos[alvo] = 0\n\t\tvivos--\n\t\tpos = prox_vivo(elementos, alvo)\n\t}\n\treturn pos\n}\n\nfunc main() {\n\tvar size, pos int\n\tfmt.Scanf(\"%d\", &size)\n\tfmt.Scanf(\"%d\", &pos)\n\telementos := make([]int, size)\n\tfor i := 0; i < size; i++ {\n\t\telementos[i] = i + 1\n\t}\n\tsobrevivente := executar(elementos, pos)\n\tfmt.Println(sobrevivente)\n}\n",
+            "lines": "36"
+        }
+    ]
+}

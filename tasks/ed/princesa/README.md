@@ -1,6 +1,6 @@
 # Princesa v1
 
-[![_](../../.tko/cache/ed/base/princesa/cover.jpg)](https://www.youtube.com/watch?v=uCsD3ZGzMgE)
+[![_](../../.tko/cache/6421490caf670842e74ba5681e807eeaa53f9028/base/princesa/cover.jpg)](https://www.youtube.com/watch?v=uCsD3ZGzMgE)
 
 [](solver.cpp)
 Um problema bem interessante e antigo da matemática é conhecido como Josephus Problem. No link da imagem você pode, por curiosidades aprender bastantes sobre ele e o modelo matemático que se propõe a modelá-lo.
