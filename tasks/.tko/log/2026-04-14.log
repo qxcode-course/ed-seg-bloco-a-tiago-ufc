@@ -1,0 +1,22 @@
+2026-04-14 14:34:05, MOVE, v:1, k:ed@pedra, mode:PICK
+2026-04-14 14:34:07, EXEC, v:1, k:ed@pedra, mode:FREE
+2026-04-14 14:35:53, EXEC, v:1, k:ed@pedra, mode:FREE
+2026-04-14 14:34:05, MOVE, v:1, k:ed@pedra, mode:EDIT
+2026-04-14 14:34:05, MOVE, v:1, k:ed@pedra, mode:EDIT
+2026-04-14 14:34:07, MOVE, v:1, k:ed@pedra, mode:EDIT
+2026-04-14 14:35:54, MOVE, v:1, k:ed@pedra, mode:EDIT
+2026-04-14 14:41:18, EXEC, v:1, k:ed@pedra, mode:FREE
+2026-04-14 14:41:38, EXEC, v:1, k:ed@pedra, mode:FULL, rate:100
+2026-04-14 14:41:40, MOVE, v:1, k:ed@pedra, mode:BACK
+2026-04-14 14:41:36, MOVE, v:1, k:ed@pedra, mode:EDIT
+2026-04-14 14:43:48, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-04-14 14:43:56, EXEC, v:1, k:ed@pintando, mode:FULL, rate:100
+2026-04-14 14:43:59, MOVE, v:1, k:ed@pintando, mode:BACK
+2026-04-14 14:44:03, MOVE, v:1, k:ed@pedra, mode:PICK
+2026-04-14 14:44:07, EXEC, v:1, k:ed@pedra, mode:FULL, rate:100
+2026-04-14 14:44:08, MOVE, v:1, k:ed@pedra, mode:BACK
+2026-04-14 14:43:48, MOVE, v:1, k:ed@pintando, mode:EDIT
+2026-04-14 14:43:48, MOVE, v:1, k:ed@pintando, mode:EDIT
+2026-04-14 14:43:54, MOVE, v:1, k:ed@pintando, mode:EDIT
+2026-04-14 14:43:55, MOVE, v:1, k:ed@pintando, mode:EDIT
+2026-04-14 14:44:06, MOVE, v:1, k:ed@pedra, mode:EDIT
