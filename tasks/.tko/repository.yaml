@@ -15,9 +15,8 @@ sources:
   quests: null
   tasks: null
 expanded:
+- ed@list
 - ed@vector
-- ed@basic
-- ed@map_set
 flags:
   inbox: all
   panel: help
@@ -25,4 +24,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@setbuild
+selected: ed@editorint
+selected_index: 20

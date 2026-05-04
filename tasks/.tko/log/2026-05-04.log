@@ -1,0 +1,44 @@
+2026-05-04 15:58:49, MOVE, v:1, k:ed@editorint, mode:DOWN
+2026-05-04 15:58:51, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-05-04 16:00:15, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-05-04 16:03:43, EXEC, v:1, k:src@go, mode:FREE, size:259
+2026-05-04 16:03:22, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-04 16:03:22, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-04 16:04:00, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-04 16:11:44, EXEC, v:1, k:src@go, mode:FREE
+2026-05-04 16:14:09, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-05-04 16:14:44, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-04 16:14:20, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-04 16:14:21, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-04 16:14:21, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-04 16:20:52, EXEC, v:1, k:src@go, mode:FREE
+2026-05-04 16:20:57, EXEC, v:1, k:src@go, mode:FREE
+2026-05-04 16:20:58, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-04 16:25:56, EXEC, v:1, k:src@go, mode:FREE, size:268
+2026-05-04 16:25:50, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-04 16:25:59, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-04 16:30:50, EXEC, v:1, k:src@go, mode:FREE, size:270
+2026-05-04 16:32:28, EXEC, v:1, k:src@go, mode:FREE, size:270
+2026-05-04 16:32:20, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-04 16:30:52, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-04 16:33:57, EXEC, v:1, k:src@go, mode:FREE, size:269
+2026-05-04 16:36:53, EXEC, v:1, k:src@go, mode:FREE, size:270
+2026-05-04 16:36:59, EXEC, v:1, k:src@go, mode:FREE, size:271
+2026-05-04 16:36:55, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-04 16:37:02, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-04 16:37:51, EXEC, v:1, k:src@go, mode:FREE, size:273
+2026-05-04 16:39:14, EXEC, v:1, k:src@go, mode:FREE, size:275
+2026-05-04 16:39:27, EXEC, v:1, k:src@go, mode:FREE, size:275
+2026-05-04 16:40:12, EXEC, v:1, k:src@go, mode:FREE, size:276
+2026-05-04 16:41:44, EXEC, v:1, k:src@go, mode:FREE, size:274
+2026-05-04 16:41:56, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-04 16:41:46, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-04 16:43:17, EXEC, v:1, k:src@go, mode:FREE, size:274
+2026-05-04 16:46:31, EXEC, v:1, k:src@go, mode:FREE, size:274
+2026-05-04 16:46:27, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-04 16:46:33, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-04 16:53:21, EXEC, v:1, k:src@go, mode:FREE, size:274
+2026-05-04 16:53:47, MOVE, v:1, k:ed@editorint, mode:BACK
+2026-05-04 17:20:36, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-05-04 17:21:38, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-05-04 17:22:13, MOVE, v:1, k:ed@editorint, mode:BACK
