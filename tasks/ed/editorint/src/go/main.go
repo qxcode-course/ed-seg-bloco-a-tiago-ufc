@@ -20,48 +20,59 @@ func (e *Editor) InsertChar(r rune) {
 }
 
 func (e *Editor) KeyLeft() {
-	if e.cursor != e.line.Value.Front() { // Se o cursor não está no início da linha
-		e.cursor = e.cursor.Prev() // Move o cursor para a esquerda
+	if e.cursor != e.line.Value.Front() {
+		e.cursor = e.cursor.Prev()
 		return
 	}
 	// Estamos no início da linha
-	if e.line != e.lines.Front() { // Se não está na primeira linha
-		e.line = e.line.Prev()        // Move para a linha anterior
-		e.cursor = e.line.Value.End() // Move o cursor para o final da linha
+	if e.line != e.lines.Front() {
+		e.line = e.line.Prev()
+		e.cursor = e.line.Value.End()
 	}
 }
 
 func (e *Editor) KeyEnter() {
-	newline := NewList[rune]()
-	e.lines.Insert(e.line.Next(), newline)
+	newLine := NewList[rune]()
+	for it := e.cursor; it != e.line.Value.End(); {
+		next := it.Next()
+		e.line.Value.Erase(it)
+		newLine.PushBack(it.Value)
+		it = next
+	}
+	e.lines.Insert(e.line.Next(), newLine)
 	e.line = e.line.Next()
 	e.cursor = e.line.Value.Front()
 }
 
 func (e *Editor) KeyRight() {
-	if e.cursor != e.line.Value.End() { // Se o cursor não está no fim da linha
-		e.cursor = e.cursor.Next() // Move o cursor para a esquerda
+	if e.cursor != e.line.Value.End() {
+		e.cursor = e.cursor.Next()
 		return
 	}
-	// Estamos no fim da linha
-	if e.line != e.lines.Back() { // Se não está na ultima linha
-		e.line = e.line.Next()          // Move para a próxima linha
-		e.cursor = e.line.Value.Front() // Move o cursor para o começo da linha
+	if e.line != e.lines.Back() {
+		e.line = e.line.Next()
+		e.cursor = e.line.Value.Front()
 	}
 }
 
 func (e *Editor) KeyUp() {
+	pos := e.line.Value.IndexOf(e.cursor)
 	e.line = e.line.Prev()
-	fmt.Print(e.cursor.Value)
-	e.cursor = e.line.Value.Front()
-	fmt.Print(e.cursor.Value)
+	it := e.line.Value.Front()
+	for i := 0; i < pos && it != e.line.Value.End(); i++ {
+		it = it.Next()
+	}
+	e.cursor = it
 }
 
 func (e *Editor) KeyDown() {
+	pos := e.line.Value.IndexOf(e.cursor)
 	e.line = e.line.Next()
-	fmt.Print(e.cursor.Value)
-	e.cursor = e.line.Value.Front()
-	fmt.Print(e.cursor.Value)
+	it := e.line.Value.Front()
+	for i := 0; i < pos && it != e.line.Value.End(); i++ {
+		it = it.Next()
+	}
+	e.cursor = it
 }
 
 func (e *Editor) KeyBackspace() {
