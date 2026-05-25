@@ -6,23 +6,20 @@ sources:
   type: git
   writeable: false
   quests: null
-  tasks: null
 - name: sandbox
   target: sandbox
   index: README.md
   type: local
   writeable: true
   quests: null
-  tasks: null
 expanded:
-- ed@list
-- ed@vector
+- ed@map_set
 flags:
   inbox: all
-  panel: help
+  panel: graph
   show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@setbuild
-selected_index: 6
+selected: ed@princesa
+selected_index: 3

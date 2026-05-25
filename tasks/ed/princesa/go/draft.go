@@ -12,9 +12,24 @@ func prox_vivo(elementos []int, pos int) int {
 	}
 }
 
+func imprimir(elementos []int, pos int, size int) {
+	fmt.Printf("[ ")
+	for i := 0; size > i ; i++ {
+		fmt.Printf("%d", elementos[i])
+		if pos == i {
+			fmt.Printf(">")
+		}
+		if pos != 0 || pos != size {
+			fmt.Printf(" ")
+		}
+	}
+	fmt.Println("]")
+}
+
 func executar(elementos []int, pos int) int {
-	vivos := len(elementos)
+	vivos := len(elementos)	
 	for vivos > 1 {
+		imprimir(elementos, pos-1, vivos)
 		alvo := prox_vivo(elementos, pos)
 		elementos[alvo] = 0
 		vivos--
@@ -31,6 +46,6 @@ func main() {
 	for i := 0; i < size; i++ {
 		elementos[i] = i + 1
 	}
-	sobrevivente := executar(elementos, pos)
-	fmt.Println(sobrevivente)
+	executar(elementos, pos)
+	//fmt.Println(sobrevivente)
 }

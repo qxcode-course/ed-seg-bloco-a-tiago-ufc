@@ -12,8 +12,43 @@
         },
         {
             "label": "2026-03-30_15-51-38",
-            "content": "package main\n\nimport \"fmt\"\n\nfunc prox_vivo(elementos []int, pos int) int {\n\tsize := len(elementos)\n\tfor {\n\t\tpos = (pos + 1) % size\n\t\tif elementos[pos] != 0 {\n\t\t\treturn pos\n\t\t}\n\t}\n}\n\nfunc executar(elementos []int, pos int) int {\n\tvivos := len(elementos)\n\tfor vivos > 1 {\n\t\talvo := prox_vivo(elementos, pos)\n\t\telementos[alvo] = 0\n\t\tvivos--\n\t\tpos = prox_vivo(elementos, alvo)\n\t}\n\treturn pos\n}\n\nfunc main() {\n\tvar size, pos int\n\tfmt.Scanf(\"%d\", &size)\n\tfmt.Scanf(\"%d\", &pos)\n\telementos := make([]int, size)\n\tfor i := 0; i < size; i++ {\n\t\telementos[i] = i + 1\n\t}\n\tsobrevivente := executar(elementos, pos)\n\tfmt.Println(sobrevivente)\n}\n",
+            "content": "@@ -179,281 +179,8 @@\n %0A%7D%0A%0A\n-func imprimir(elementos %5B%5Dint, pos int, size int) %7B%0A%09fmt.Printf(%22%5B %22)%0A%09for i := 0; size %3E i; i++ %7B%0A%09%09fmt.Printf(%22%25d%22)%0A%09%09if pos == i %7B%0A%09%09%09fmt.Printf(%22%25d%3E%22, i)%0A%09%09%7D else %7B%0A%09%09%09fmt.Printf(%22%25d%22, i)%0A%09%09%7D%0A%09%09if pos != 0 %7C%7C pos != size %7B%0A%09%09%09fmt.Printf(%22 %22)%0A%09%09%7D%0A%09%7D%0A%09fmt.Printf(%22%5D%22)%0A%7D%0A%0A\n func\n@@ -214,18 +214,8 @@\n pos \n-int, size \n int)\n@@ -250,40 +250,8 @@\n os)%0A\n-%09imprimir(elementos, pos, size)%0A\n %09for\n@@ -591,22 +591,16 @@\n tos, pos\n-, size\n )%0A%09fmt.P\n",
             "lines": "36"
+        },
+        {
+            "label": "2026-05-19_16-41-03",
+            "content": "@@ -295,22 +295,8 @@\n %22%25d%22\n-, elementos%5Bi%5D\n )%0A%09%09\n@@ -328,10 +328,49 @@\n tf(%22\n-%3E%22\n+%25d%3E%22, i)%0A%09%09%7D else %7B%0A%09%09%09fmt.Printf(%22%25d%22, i\n )%0A%09%09\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-05-19_16-42-22",
+            "content": "@@ -258,35 +258,32 @@\n i := 0; size %3E i\n-+1 \n ; i++ %7B%0A%09%09fmt.Pr\n@@ -409,26 +409,25 @@\n %7D%0A%09fmt.Print\n-ln\n+f\n (%22%5D%22)%0A%7D%0A%0A%0A//\n@@ -427,24 +427,20 @@\n %0A%7D%0A%0A\n-%0A// \n func \n-imprimi\n+executa\n r(el\n@@ -477,368 +477,87 @@\n nt) \n-%7B%0A// %09fmt.Printf(%22%5B %22)%0A// %09for i := 0; size %3E i+1 ; i++ %7B%0A// %09%09fmt.Printf(%22%25d%22, elementos%5Bi%5D)%0A// %09%09if pos == i %7B%0A// %09%09%09fmt.Printf(%22%3E%22)%0A// %09%09%7D%0A// %09%09if pos != 0 %7C%7C pos != size %7B%0A// %09%09%09fmt.Printf(%22 %22)%0A// %09%09%7D%0A// %09%7D%0A// %09fmt.Println(%22%5D%22)%0A// %7D%0A%0Afunc executar(elementos %5B%5Dint, pos int) int %7B%0A%09vivos := len(elementos)%09%0A%09for vivos %3E 1 %7B%0A%09%09imprimir(elementos, pos, vivos)\n+int %7B%0A%09vivos := len(elementos)%0A%09imprimir(elementos, pos, size)%0A%09for vivos %3E 1 %7B\n %0A%09%09a\n@@ -881,16 +881,22 @@\n tos, pos\n+, size\n )%0A%09fmt.P\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-05-19_16-51-43",
+            "content": "@@ -795,41 +795,8 @@\n s)%09%0A\n-%09imprimir(elementos, pos, vivos)%0A\n %09for\n@@ -1131,19 +1131,16 @@\n + 1%0A%09%7D%0A%09\n-// \n sobreviv\n@@ -1173,19 +1173,16 @@\n , pos)%0A%09\n-// \n fmt.Prin\n",
+            "lines": "66"
+        },
+        {
+            "label": "2026-05-19_16-52-44",
+            "content": "@@ -1164,16 +1164,35 @@\n + 1%0A%09%7D%0A%09\n+// sobrevivente := \n executar\n@@ -1211,16 +1211,17 @@\n pos)%0A%09//\n+ \n fmt.Prin\n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-05-19_16-53-58",
+            "content": "@@ -266,16 +266,18 @@\n size %3E i\n++1\n  ; i++ %7B\n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-05-19_16-54-33",
+            "content": "@@ -789,16 +789,49 @@\n entos)%09%0A\n+%09imprimir(elementos, pos, vivos)%0A\n %09for viv\n@@ -868,10 +868,8 @@\n  pos\n--1\n , vi\n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-05-19_16-55-30",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc prox_vivo(elementos []int, pos int) int {\n\tsize := len(elementos)\n\tfor {\n\t\tpos = (pos + 1) % size\n\t\tif elementos[pos] != 0 {\n\t\t\treturn pos\n\t\t}\n\t}\n}\n\nfunc imprimir(elementos []int, pos int, size int) {\n\tfmt.Printf(\"[ \")\n\tfor i := 0; size > i ; i++ {\n\t\tfmt.Printf(\"%d\", elementos[i])\n\t\tif pos == i {\n\t\t\tfmt.Printf(\">\")\n\t\t}\n\t\tif pos != 0 || pos != size {\n\t\t\tfmt.Printf(\" \")\n\t\t}\n\t}\n\tfmt.Println(\"]\")\n}\n\n\n// func imprimir(elementos []int, pos int, size int) {\n// \tfmt.Printf(\"[ \")\n// \tfor i := 0; size > i+1 ; i++ {\n// \t\tfmt.Printf(\"%d\", elementos[i])\n// \t\tif pos == i {\n// \t\t\tfmt.Printf(\">\")\n// \t\t}\n// \t\tif pos != 0 || pos != size {\n// \t\t\tfmt.Printf(\" \")\n// \t\t}\n// \t}\n// \tfmt.Println(\"]\")\n// }\n\nfunc executar(elementos []int, pos int) int {\n\tvivos := len(elementos)\t\n\tfor vivos > 1 {\n\t\timprimir(elementos, pos-1, vivos)\n\t\talvo := prox_vivo(elementos, pos)\n\t\telementos[alvo] = 0\n\t\tvivos--\n\t\tpos = prox_vivo(elementos, alvo)\n\t}\n\treturn pos\n}\n\nfunc main() {\n\tvar size, pos int\n\tfmt.Scanf(\"%d\", &size)\n\tfmt.Scanf(\"%d\", &pos)\n\telementos := make([]int, size)\n\tfor i := 0; i < size; i++ {\n\t\telementos[i] = i + 1\n\t}\n\texecutar(elementos, pos)\n\t//fmt.Println(sobrevivente)\n}\n",
+            "lines": "66"
         }
     ]
 }
