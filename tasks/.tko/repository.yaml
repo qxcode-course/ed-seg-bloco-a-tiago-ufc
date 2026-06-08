@@ -13,13 +13,13 @@ sources:
   writeable: true
   quests: null
 expanded:
-- ed@map_set
+- ed@rec
 flags:
   inbox: all
-  panel: graph
+  panel: skills
   show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@princesa
-selected_index: 3
+selected: ed@map_set
+selected_index: 1

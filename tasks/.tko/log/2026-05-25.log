@@ -1,0 +1,30 @@
+2026-05-25 03:26:15, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-05-25 03:26:18, MOVE, v:1, k:ed@editorint, mode:BACK
+2026-05-25 03:27:38, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-05-25 03:27:40, MOVE, v:1, k:ed@pintando, mode:BACK
+2026-05-25 03:28:39, MOVE, v:1, k:ed@lista_d1, mode:DOWN
+2026-05-25 16:09:23, MOVE, v:1, k:ed@bufferring, mode:DOWN
+2026-05-25 16:09:35, MOVE, v:1, k:ed@bufferring, mode:PICK
+2026-05-25 16:09:39, EXEC, v:1, k:ed@bufferring, mode:FREE, size:110
+2026-05-25 16:09:41, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-05-25 16:09:23, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-05-25 16:09:23, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-05-25 16:09:40, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-05-25 16:10:18, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-05-25 16:19:03, MOVE, v:1, k:ed@bufferring, mode:PICK
+2026-05-25 16:19:08, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-05-25 16:33:59, EXEC, v:1, k:ed@bufferring, mode:FREE
+2026-05-25 16:34:19, MOVE, v:1, k:ed@pilha, mode:DOWN
+2026-05-25 16:34:19, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-05-25 16:34:19, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-05-25 16:34:19, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-05-25 16:34:19, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-05-25 16:56:43, MOVE, v:1, k:ed@chaves, mode:DOWN
+2026-05-25 16:56:43, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-05-25 16:56:43, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-05-25 16:56:43, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-05-25 16:56:43, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-05-25 17:03:04, MOVE, v:1, k:ed@chaves, mode:PICK
+2026-05-25 17:03:25, EXEC, v:1, k:ed@chaves, mode:FULL, rate:0, size:47
+2026-05-25 17:03:25, EXEC, v:1, k:ed@chaves, mode:FREE, size:47
+2026-05-25 17:03:27, MOVE, v:1, k:ed@chaves, mode:EDIT
