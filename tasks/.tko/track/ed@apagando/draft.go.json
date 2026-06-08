@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-08_07-05-04",
+            "content": "@@ -174,20 +174,13 @@\n ake(\n-map%5Bint%5Dbool\n+%5B%5Dint\n , M)\n@@ -210,20 +210,8 @@\n + %7B%0A\n-%09%09var x int%0A\n %09%09fm\n@@ -222,29 +222,18 @@\n an(&\n-x)%0A%09%09\n sairam%5B\n-x%5D = true\n+i%5D)\n %0A%09%7D%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-06-08_07-08-14",
+            "content": "@@ -326,17 +326,16 @@\n intf(%22%25d\n- \n %22, id)%0A%09\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-06-08_07-08-35",
+            "content": "@@ -345,21 +345,6 @@\n %0A%09%7D%0A\n-%09fmt.Print(%22%22)%0A\n %7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-06-08_07-09-10",
+            "content": "@@ -355,11 +355,11 @@\n rint\n-ln(\n+(%22%22\n )%0A%7D%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-06-08_07-09-29",
+            "content": "@@ -153,16 +153,17 @@\n can(&M)%0A\n+%0A\n %09sairam \n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-06-08_07-27-06",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar N, M int\n\tfmt.Scan(&N)\n\n\tfila := make([]int, N)\n\tfor i := 0; i < N; i++ {\n\t\tfmt.Scan(&fila[i])\n\t}\n\n\tfmt.Scan(&M)\n\tsairam := make(map[int]bool, M)\n\tfor i := 0; i < M; i++ {\n\t\tvar x int\n\t\tfmt.Scan(&x)\n\t\tsairam[x] = true\n\t}\n\n\tfor _, id := range fila {\n\t\tif !sairam[id] {\n\t\t\tfmt.Printf(\"%d \", id)\n\t\t}\n\t}\n\tfmt.Println()\n}\n",
+            "lines": "28"
+        }
+    ]
+}

@@ -4,44 +4,86 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"sort"
 	"strconv"
 	"strings"
 )
 
 func getMen(vet []int) []int {
-	_ = vet
-	return nil
+	list := []int{}
+	for _, val := range vet {
+		if val > 0 {
+			list = append(list, val)
+		}
+	}
+	return list
 }
 
 func getCalmWomen(vet []int) []int {
-	_ = vet
-	return nil
+	list := []int{}
+	for _, val := range vet {
+		if val < 0 && val > -10 {
+			list = append(list, val)
+		}
+	}
+	return list
 }
 
 func sortVet(vet []int) []int {
-	_ = vet
-	return nil
+	sort.Ints(vet)
+	return vet
+}
+
+func abs(x int) int {
+	if x < 0 {
+		return -x
+	}
+	return x
 }
 
 func sortStress(vet []int) []int {
-	_ = vet
-	return nil
+	sort.Slice(vet, func(i, j int) bool {
+		return abs(vet[i]) < abs(vet[j])
+	})
+	return vet
 }
 
 func reverse(vet []int) []int {
-	_ = vet
-	return nil
+	rev := make([]int, len(vet))
+	copy(rev, vet)
+	for i, j := 0, len(rev)-1; i < j; i, j = i+1, j-1 {
+		rev[i], rev[j] = rev[j], rev[i]
+	}
+	return rev
 }
 
 func unique(vet []int) []int {
-	_ = vet
-	return nil
+	visto := make(map[int]bool)
+	uni := make([]int, 0, len(vet))
+
+	for _, val := range vet {
+		if !visto[val] {
+			visto[val] = true
+			uni = append(uni, val)
+		}
+	}
+	return uni
 }
 
 func repeated(vet []int) []int {
-	_ = vet
-	return nil
+    visto := make(map[int]bool)
+    rep := []int{}
+
+    for _, val := range vet {
+        if visto[val] {
+            rep = append(rep, val)
+        } else {
+            visto[val] = true
+        }
+    }
+    return rep
 }
+
 
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
@@ -103,4 +145,3 @@ func str2vet(s string) []int {
 	}
 	return vet
 }
-

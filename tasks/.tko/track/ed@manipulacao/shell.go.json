@@ -1,0 +1,74 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-08_07-12-05",
+            "content": "@@ -99,111 +99,15 @@\n  %7B%0A%09\n-list := make(%5B%5Dint, 0)%0A%09for i, el := range(vet)%7B%0A%09%09if vet%5Bel%5D %3E 0 %7B%0A%09%09%09list%5Bi%5D = el%0A%09%09%7D%0A%09%7D%0A%09print(list)\n+_ = vet\n %0A%09re\n@@ -115,12 +115,11 @@\n urn \n-list\n+nil\n %0A%7D%0A%0A\n",
+            "lines": "106"
+        },
+        {
+            "label": "2026-06-08_07-24-32",
+            "content": "@@ -185,17 +185,29 @@\n l%0A%09%09%7D%0A%09%7D\n-%09\n+%0A%09print(list)\n %0A%09return\n",
+            "lines": "112"
+        },
+        {
+            "label": "2026-06-08_07-27-23",
+            "content": "@@ -118,34 +118,33 @@\n int, 0)%0A%09for i, \n-va\n+e\n l := range(vet)%7B\n@@ -149,26 +149,25 @@\n )%7B%0A%09%09if vet%5B\n-va\n+e\n l%5D %3E 0 %7B%0A%09%09%09\n@@ -172,26 +172,25 @@\n %09%09list%5Bi%5D = \n-va\n+e\n l%0A%09%09%7D%0A%09%7D%09%0A%09r\n@@ -245,108 +245,15 @@\n  %7B%0A%09\n-women := make(%5B%5Dint, 0)%0A%09for i, val := range(vet)%7B%0A%09%09if vet%5Bval%5D %3E= -10 %7B%0A%09%09%09women%5Bi%5D = val%0A%09%09%7D%09%09%0A%09%7D\n+_ = vet\n %0A%09re\n@@ -257,21 +257,19 @@\n %09return \n-women\n+nil\n %0A%7D%0A%0Afunc\n",
+            "lines": "111"
+        },
+        {
+            "label": "2026-06-08_07-32-18",
+            "content": "@@ -42,16 +42,8 @@\n os%22%0A\n-%09%22sort%22%0A\n %09%22st\n@@ -130,37 +130,37 @@\n  i, val := range\n- vet \n+(vet)\n %7B%0A%09%09if vet%5Bval%5D \n@@ -180,32 +180,33 @@\n %5Bi%5D = val%0A%09%09%7D%0A%09%7D\n+%09\n %0A%09return list%0A%7D%0A\n@@ -284,29 +284,29 @@\n val := range\n- vet \n+(vet)\n %7B%0A%09%09if vet%5Bv\n@@ -335,24 +335,26 @@\n i%5D = val%0A%09%09%7D\n+%09%09\n %0A%09%7D%0A%09return \n@@ -399,22 +399,15 @@\n  %7B%0A%09\n-sort.Ints(\n+_ = \n vet\n-)\n %0A%09re\n@@ -415,204 +415,58 @@\n urn \n-vet%0A%7D%0A%0Afunc abs(x int) int %7B%0A    if x %3C 0 %7B%0A        return -x%0A    %7D%0A    return x%0A%7D%0A%0Afunc sortStress(vet %5B%5Dint) %5B%5Dint %7B%0A%09sort.Slice(vet, func(i, j int) bool %7B%0A%09%09return abs(vet%5Bi%5D) %3C abs(vet%5Bj%5D)%0A%09%7D)\n+nil%0A%7D%0A%0Afunc sortStress(vet %5B%5Dint) %5B%5Dint %7B%0A%09_ = vet\n %0A%09re\n@@ -470,19 +470,19 @@\n %09return \n-vet\n+nil\n %0A%7D%0A%0Afunc\n@@ -1735,12 +1735,13 @@\n eturn vet%0A%7D%0A\n+%0A\n",
+            "lines": "116"
+        },
+        {
+            "label": "2026-06-08_07-41-57",
+            "content": "@@ -452,17 +452,20 @@\n ) int %7B%0A\n-%09\n+    \n if x %3C 0\n@@ -467,18 +467,24 @@\n x %3C 0 %7B%0A\n-%09%09\n+        \n return -\n@@ -485,20 +485,26 @@\n turn -x%0A\n-%09%7D%0A%09\n+    %7D%0A    \n return x\n@@ -672,351 +672,70 @@\n  %7B%0A%09\n-rev := make(%5B%5Dint, len(vet))%0A%09copy(rev, vet)%0A%09for i, j := 0, len(rev)-1; i %3C j; i, j = i+1, j-1 %7B%0A%09%09rev%5Bi%5D, rev%5Bj%5D = rev%5Bj%5D, rev%5Bi%5D%0A%09%7D%0A%09return rev%0A%7D%0A%0Afunc unique(vet %5B%5Dint) %5B%5Dint %7B%0A%09visto := make(map%5Bint%5Dbool)%0A%09uni := make(%5B%5Dint, 0, len(vet))%0A%0A%09for _, val := range vet %7B%0A%09%09if !visto%5Bval%5D %7B%0A%09%09%09visto%5Bval%5D = true%0A%09%09%09uni = append(uni, val)%0A%09%09%7D%0A%09%7D\n+_ = vet%0A%09return nil%0A%7D%0A%0Afunc unique(vet %5B%5Dint) %5B%5Dint %7B%0A%09_ = vet\n %0A%09re\n@@ -739,19 +739,19 @@\n %09return \n-u\n ni\n+l\n %0A%7D%0A%0Afunc\n@@ -784,180 +784,27 @@\n  %7B%0A%09\n-visto := make(map%5Bint%5Dbool)%0A%09rep := make(%5B%5Dint, 0, len(vet))%0A%0A%09for _, val := range vet %7B%0A%09%09if visto%5Bval%5D %7B%0A%09%09%09visto%5Bval%5D = true%0A%09%09%09rep = append(rep, val)%0A%09%09%7D%0A%09%7D%0A%09return rep\n+_ = vet%0A%09return nil\n %0A%7D%0A%0A\n",
+            "lines": "125"
+        },
+        {
+            "label": "2026-06-08_07-52-15",
+            "content": "@@ -107,38 +107,45 @@\n  %7B%0A%09list := \n+make(\n %5B%5Dint\n-%7B%7D\n+, 0)\n %0A%09for \n-_\n+i\n , val := ran\n@@ -180,36 +180,25 @@\n %0A%09%09%09list\n- = append(list,\n+%5Bi%5D =\n  val\n-)\n %0A%09%09%7D%0A%09%7D%0A\n@@ -255,30 +255,38 @@\n  %7B%0A%09\n-list := \n+women := make(\n %5B%5Dint\n-%7B%7D\n+, 0)\n %0A%09for \n-_\n+i\n , va\n@@ -332,32 +332,22 @@\n %0A%09%09%09\n-list = append(list,\n+women%5Bi%5D =\n  val\n-)\n %0A%09%09%7D\n@@ -350,36 +350,37 @@\n %0A%09%09%7D%0A%09%7D%0A%09return \n-list\n+women\n %0A%7D%0A%0Afunc sortVet\n@@ -2304,21 +2304,20 @@\n n)%0A%09%7D%0A%09return vet%0A%7D%0A\n-%0A\n",
+            "lines": "145"
+        },
+        {
+            "label": "2026-06-08_07-55-45",
+            "content": "@@ -151,19 +151,24 @@\n  %7B%0A%09%09if \n+vet%5B\n val\n+%5D\n  %3E 0 %7B%0A%09\n@@ -303,19 +303,24 @@\n  %7B%0A%09%09if \n+vet%5B\n val\n+%5D\n  %3E= -10 \n",
+            "lines": "146"
+        },
+        {
+            "label": "2026-06-08_07-56-56",
+            "content": "@@ -302,16 +302,16 @@\n %09if \n--\n val \n-%3C\n+%3E\n = \n+-\n 10 %7B\n",
+            "lines": "146"
+        },
+        {
+            "label": "2026-06-08_07-58-07",
+            "content": "@@ -302,22 +302,18 @@\n %09if \n+-\n val %3C= \n-abs(\n 10\n-)\n  %7B%0A%09\n",
+            "lines": "146"
+        },
+        {
+            "label": "2026-06-08_07-58-33",
+            "content": "@@ -302,22 +302,22 @@\n %09if \n-abs(\n val\n-)\n  %3C= \n+abs(\n 10\n+)\n  %7B%0A%09\n",
+            "lines": "146"
+        },
+        {
+            "label": "2026-06-08_07-58-50",
+            "content": "@@ -308,16 +308,17 @@\n s(val) %3C\n+=\n  10 %7B%0A%09%09\n",
+            "lines": "146"
+        },
+        {
+            "label": "2026-06-08_07-59-41",
+            "content": "@@ -302,26 +302,19 @@\n %09if \n+abs(\n val\n+)\n  %3C \n-0 && val %3E -\n 10 %7B\n@@ -2302,20 +2302,21 @@\n n)%0A%09%7D%0A%09return vet%0A%7D%0A\n+%0A\n",
+            "lines": "146"
+        },
+        {
+            "label": "2026-06-08_08-02-41",
+            "content": "@@ -1050,20 +1050,17 @@\n %5B%5Dint %7B%0A\n-    \n+%09\n visto :=\n@@ -1083,32 +1083,43 @@\n ol)%0A\n-    \n+%09\n rep := \n-%5B%5Dint%7B%7D%0A%0A    \n+make(%5B%5Dint, 0, len(vet))%0A%0A%09\n for \n@@ -1140,24 +1140,18 @@\n e vet %7B%0A\n-        \n+%09%09\n if visto\n@@ -1162,110 +1162,63 @@\n %5D %7B%0A\n-            rep = append(rep, val)%0A        %7D else %7B%0A            visto%5Bval%5D = true%0A        %7D%0A    %7D%0A    \n+%09%09%09visto%5Bval%5D = true%0A%09%09%09rep = append(rep, val)%0A%09%09%7D%0A%09%7D%0A%09\n retu\n@@ -1227,17 +1227,16 @@\n  rep%0A%7D%0A%0A\n-%0A\n func mai\n",
+            "lines": "145"
+        },
+        {
+            "label": "2026-06-08_08-03-46",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"sort\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc getMen(vet []int) []int {\n\tlist := []int{}\n\tfor _, val := range vet {\n\t\tif val > 0 {\n\t\t\tlist = append(list, val)\n\t\t}\n\t}\n\treturn list\n}\n\nfunc getCalmWomen(vet []int) []int {\n\tlist := []int{}\n\tfor _, val := range vet {\n\t\tif val < 0 && val > -10 {\n\t\t\tlist = append(list, val)\n\t\t}\n\t}\n\treturn list\n}\n\nfunc sortVet(vet []int) []int {\n\tsort.Ints(vet)\n\treturn vet\n}\n\nfunc abs(x int) int {\n\tif x < 0 {\n\t\treturn -x\n\t}\n\treturn x\n}\n\nfunc sortStress(vet []int) []int {\n\tsort.Slice(vet, func(i, j int) bool {\n\t\treturn abs(vet[i]) < abs(vet[j])\n\t})\n\treturn vet\n}\n\nfunc reverse(vet []int) []int {\n\trev := make([]int, len(vet))\n\tcopy(rev, vet)\n\tfor i, j := 0, len(rev)-1; i < j; i, j = i+1, j-1 {\n\t\trev[i], rev[j] = rev[j], rev[i]\n\t}\n\treturn rev\n}\n\nfunc unique(vet []int) []int {\n\tvisto := make(map[int]bool)\n\tuni := make([]int, 0, len(vet))\n\n\tfor _, val := range vet {\n\t\tif !visto[val] {\n\t\t\tvisto[val] = true\n\t\t\tuni = append(uni, val)\n\t\t}\n\t}\n\treturn uni\n}\n\nfunc repeated(vet []int) []int {\n    visto := make(map[int]bool)\n    rep := []int{}\n\n    for _, val := range vet {\n        if visto[val] {\n            rep = append(rep, val)\n        } else {\n            visto[val] = true\n        }\n    }\n    return rep\n}\n\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tfor {\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tfmt.Print(\"$\")\n\t\tline := scanner.Text()\n\t\targs := strings.Split(line, \" \")\n\t\tfmt.Println(line)\n\n\t\tswitch args[0] {\n\t\tcase \"get_men\":\n\t\t\tprintVec(getMen(str2vet(args[1])))\n\t\tcase \"get_calm_women\":\n\t\t\tprintVec(getCalmWomen(str2vet(args[1])))\n\t\tcase \"sort\":\n\t\t\tprintVec(sortVet(str2vet(args[1])))\n\t\tcase \"sort_stress\":\n\t\t\tprintVec(sortStress(str2vet(args[1])))\n\t\tcase \"reverse\":\n\t\t\tarray := str2vet(args[1])\n\t\t\tother := reverse(array)\n\t\t\tprintVec(array)\n\t\t\tprintVec(other)\n\t\tcase \"unique\":\n\t\t\tprintVec(unique(str2vet(args[1])))\n\t\tcase \"repeated\":\n\t\t\tprintVec(repeated(str2vet(args[1])))\n\t\tcase \"end\":\n\t\t\treturn\n\t\t}\n\t}\n}\n\nfunc printVec(vet []int) {\n\tfmt.Print(\"[\")\n\tfor i, val := range vet {\n\t\tif i > 0 {\n\t\t\tfmt.Print(\", \")\n\t\t}\n\t\tfmt.Print(val)\n\t}\n\tfmt.Println(\"]\")\n}\n\nfunc str2vet(s string) []int {\n\tif s == \"[]\" {\n\t\treturn nil\n\t}\n\ts = s[1 : len(s)-1]\n\tparts := strings.Split(s, \",\")\n\tvar vet []int\n\tfor _, part := range parts {\n\t\tn, _ := strconv.Atoi(part)\n\t\tvet = append(vet, n)\n\t}\n\treturn vet\n}\n",
+            "lines": "147"
+        }
+    ]
+}
