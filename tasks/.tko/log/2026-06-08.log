@@ -75,3 +75,28 @@
 2026-06-08 08:03:46, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:100, size:147
 2026-06-08 08:03:49, MOVE, v:1, k:ed@manipulacao, mode:BACK
 2026-06-08 08:04:31, SELF, v:1, k:ed@manipulacao, self:1, rate:100, study:60, concept:1, refactor:1
+2026-06-08 08:36:59, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-06-08 08:37:22, EXEC, v:1, k:ed@especiais, mode:FREE, size:132
+2026-06-08 08:38:09, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-06-08 08:39:12, MOVE, v:1, k:ed@especiais, mode:BACK
+2026-06-08 08:39:18, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-06-08 08:39:36, MOVE, v:1, k:ed@especiais, mode:BACK
+2026-06-08 08:39:40, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-06-08 08:39:49, EXEC, v:1, k:ed@especiais, mode:FREE
+2026-06-08 08:41:49, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-06-08 08:41:52, EXEC, v:1, k:ed@especiais, mode:FREE
+2026-06-08 08:43:43, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-06-08 08:45:42, MOVE, v:1, k:ed@especiais, mode:BACK
+2026-06-08 08:54:09, MOVE, v:1, k:ed@subset_sum, mode:DOWN
+2026-06-08 08:54:27, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-08 08:54:35, EXEC, v:1, k:ed@subset_sum, mode:FREE, size:5
+2026-06-08 08:54:33, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-06-08 08:54:09, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-06-08 08:54:33, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-06-08 08:54:37, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-06-08 08:57:22, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-08 08:57:28, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-08 08:57:57, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0
+2026-06-08 09:00:16, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-08 09:00:25, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-08 09:00:35, EXEC, v:1, k:ed@subset_sum, mode:FREE

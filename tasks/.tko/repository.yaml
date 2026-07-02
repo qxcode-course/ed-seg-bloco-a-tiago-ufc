@@ -13,7 +13,7 @@ sources:
   writeable: true
   quests: null
 expanded:
-- ed@map_set
+- ed@backtrack
 flags:
   inbox: all
   panel: skills
@@ -21,5 +21,5 @@ flags:
   task_graph_mode: time
   show_time: 'true'
 lang: go
-selected: ed@especiais
-selected_index: 6
+selected: ed@subset_sum
+selected_index: 7
