@@ -1,0 +1,121 @@
+2026-07-08 19:45:51, MOVE, v:1, k:ed@rotacoes, mode:PICK
+2026-07-08 19:55:35, MOVE, v:1, k:ed@rotacoes, mode:PICK
+2026-07-08 19:55:40, MOVE, v:1, k:ed@rotacoes, mode:EDIT
+2026-07-08 20:03:51, MOVE, v:1, k:ed@rotacoes, mode:EDIT
+2026-07-08 20:05:58, MOVE, v:1, k:ed@rotacoes, mode:EDIT
+2026-07-08 20:11:26, EXEC, v:1, k:ed@rotacoes, mode:FREE, size:24
+2026-07-08 20:13:03, MOVE, v:1, k:ed@rotacoes, mode:PICK
+2026-07-08 20:13:05, EXEC, v:1, k:ed@rotacoes, mode:FREE, size:24
+2026-07-08 20:13:32, MOVE, v:1, k:ed@rotacoes, mode:PICK
+2026-07-08 20:14:50, MOVE, v:1, k:ed@rotacoes, mode:PICK
+2026-07-08 20:15:27, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:0
+2026-07-08 21:11:30, MOVE, v:1, k:ed@rotacoes, mode:PICK
+2026-07-08 21:11:44, MOVE, v:1, k:ed@rotacoes, mode:EDIT
+2026-07-08 21:16:51, MOVE, v:1, k:ed@rotacoes, mode:EDIT
+2026-07-08 21:18:16, MOVE, v:1, k:ed@alternando, mode:EDIT
+2026-07-08 21:18:16, MOVE, v:1, k:ed@apagando, mode:EDIT
+2026-07-08 21:18:16, MOVE, v:1, k:ed@apagando, mode:EDIT
+2026-07-08 21:18:16, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-07-08 21:18:16, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-07-08 21:18:16, MOVE, v:1, k:ed@buscas, mode:EDIT
+2026-07-08 21:18:16, MOVE, v:1, k:ed@buscas, mode:EDIT
+2026-07-08 21:18:16, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-07-08 21:18:16, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-07-08 21:18:16, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-07-08 21:18:16, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-07-08 21:18:16, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-07-08 21:18:16, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-07-08 21:18:16, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-07-08 21:18:16, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-07-08 21:18:16, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-07-08 21:18:16, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-07-08 21:18:16, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-07-08 21:18:16, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-07-08 21:18:16, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-07-08 21:18:16, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-07-08 21:18:16, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-07-08 21:18:16, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-07-08 21:18:16, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-07-08 21:18:16, MOVE, v:1, k:ed@princesa, mode:EDIT
+2026-07-08 21:18:16, MOVE, v:1, k:ed@princesa, mode:EDIT
+2026-07-08 21:18:16, MOVE, v:1, k:ed@queimada, mode:EDIT
+2026-07-08 21:18:16, MOVE, v:1, k:ed@queimada, mode:EDIT
+2026-07-08 21:18:16, MOVE, v:1, k:ed@resto, mode:EDIT
+2026-07-08 21:18:16, MOVE, v:1, k:ed@rotacoes, mode:EDIT
+2026-07-08 21:18:16, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-07-08 21:18:16, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-07-08 21:18:16, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-07-08 21:18:16, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-07-08 21:18:16, MOVE, v:1, k:ed@triangulo, mode:EDIT
+2026-07-08 21:18:16, MOVE, v:1, k:ed@triangulo, mode:EDIT
+2026-07-08 21:18:16, MOVE, v:1, k:ed@vetbuild, mode:EDIT
+2026-07-08 21:18:16, MOVE, v:1, k:ed@vetbuild, mode:EDIT
+2026-07-08 21:19:52, MOVE, v:1, k:ed@rotacoes, mode:EDIT
+2026-07-08 21:28:13, MOVE, v:1, k:ed@rotacoes, mode:EDIT
+2026-07-08 22:36:43, MOVE, v:1, k:ed@rotacoes, mode:BACK
+2026-07-08 22:40:03, MOVE, v:1, k:ed@rotacoes, mode:PICK
+2026-07-08 22:42:09, MOVE, v:1, k:ed@rotacoes, mode:EDIT
+2026-07-08 22:56:57, MOVE, v:1, k:ed@buscas, mode:PICK
+2026-07-08 22:57:06, MOVE, v:1, k:ed@buscas, mode:BACK
+2026-07-08 22:57:12, MOVE, v:1, k:ed@rotacoes, mode:PICK
+2026-07-08 22:57:25, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:0, size:24
+2026-07-08 23:01:25, MOVE, v:1, k:ed@rotacoes, mode:EDIT
+2026-07-08 22:57:25, MOVE, v:1, k:ed@rotacoes, mode:EDIT
+2026-07-08 23:01:46, MOVE, v:1, k:ed@rotacoes, mode:PICK
+2026-07-08 23:01:50, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:0, size:29
+2026-07-08 23:03:53, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:0, size:19
+2026-07-08 23:05:02, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:0, size:19
+2026-07-08 23:05:58, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:0
+2026-07-08 23:05:58, MOVE, v:1, k:ed@rotacoes, mode:EDIT
+2026-07-08 23:05:55, MOVE, v:1, k:ed@rotacoes, mode:EDIT
+2026-07-08 23:07:54, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:0
+2026-07-08 23:08:50, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:0, size:18
+2026-07-08 23:11:01, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:0, size:26
+2026-07-08 23:11:38, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:0, size:26
+2026-07-08 23:11:34, MOVE, v:1, k:ed@rotacoes, mode:EDIT
+2026-07-08 23:11:37, MOVE, v:1, k:ed@rotacoes, mode:EDIT
+2026-07-08 23:11:50, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:0
+2026-07-08 23:12:03, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:100, size:26
+2026-07-08 23:12:04, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:100
+2026-07-08 23:13:58, MOVE, v:1, k:ed@rotacoes, mode:BACK
+2026-07-08 23:15:11, SELF, v:1, k:ed@rotacoes, self:1, rate:100, study:45, concept:1
+2026-07-08 23:12:00, MOVE, v:1, k:ed@rotacoes, mode:EDIT
+2026-07-08 23:12:04, MOVE, v:1, k:ed@rotacoes, mode:EDIT
+2026-07-08 23:38:15, MOVE, v:1, k:ed@alternando, mode:EDIT
+2026-07-08 23:38:15, MOVE, v:1, k:ed@apagando, mode:EDIT
+2026-07-08 23:38:15, MOVE, v:1, k:ed@apagando, mode:EDIT
+2026-07-08 23:38:15, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-07-08 23:38:15, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-07-08 23:38:15, MOVE, v:1, k:ed@buscas, mode:EDIT
+2026-07-08 23:38:15, MOVE, v:1, k:ed@buscas, mode:EDIT
+2026-07-08 23:38:15, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-07-08 23:38:15, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-07-08 23:38:15, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-07-08 23:38:15, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-07-08 23:38:15, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-07-08 23:38:15, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-07-08 23:38:15, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-07-08 23:38:15, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-07-08 23:38:15, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-07-08 23:38:15, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-07-08 23:38:15, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-07-08 23:38:15, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-07-08 23:38:15, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-07-08 23:38:15, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-07-08 23:38:15, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-07-08 23:38:15, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-07-08 23:38:15, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-07-08 23:38:15, MOVE, v:1, k:ed@princesa, mode:EDIT
+2026-07-08 23:38:15, MOVE, v:1, k:ed@princesa, mode:EDIT
+2026-07-08 23:38:15, MOVE, v:1, k:ed@queimada, mode:EDIT
+2026-07-08 23:38:15, MOVE, v:1, k:ed@queimada, mode:EDIT
+2026-07-08 23:38:15, MOVE, v:1, k:ed@resto, mode:EDIT
+2026-07-08 23:38:15, MOVE, v:1, k:ed@rotacoes, mode:EDIT
+2026-07-08 23:38:15, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-07-08 23:38:15, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-07-08 23:38:15, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-07-08 23:38:15, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-07-08 23:38:15, MOVE, v:1, k:ed@triangulo, mode:EDIT
+2026-07-08 23:38:15, MOVE, v:1, k:ed@triangulo, mode:EDIT
+2026-07-08 23:38:15, MOVE, v:1, k:ed@vetbuild, mode:EDIT
+2026-07-08 23:38:15, MOVE, v:1, k:ed@vetbuild, mode:EDIT

@@ -71,19 +71,18 @@ func unique(vet []int) []int {
 }
 
 func repeated(vet []int) []int {
-    visto := make(map[int]bool)
-    rep := []int{}
+	visto := make(map[int]bool)
+	rep := []int{}
 
-    for _, val := range vet {
-        if visto[val] {
-            rep = append(rep, val)
-        } else {
-            visto[val] = true
-        }
-    }
-    return rep
+	for _, val := range vet {
+		if visto[val] {
+			rep = append(rep, val)
+		} else {
+			visto[val] = true
+		}
+	}
+	return rep
 }
-
 
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)

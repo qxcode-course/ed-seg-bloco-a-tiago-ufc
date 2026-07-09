@@ -1,0 +1,54 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-08_20-11-26",
+            "content": "@@ -95,25 +95,25 @@\n make(%5B%5Dint, \n-t\n+n\n )%0A%0A%09for i :=\n@@ -120,17 +120,17 @@\n  0; i %3C \n-t\n+n\n ; i++ %7B%0A\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-07-08_20-13-05",
+            "content": "@@ -238,17 +238,16 @@\n vetor%5Bi%5D\n- \n %0A%09%09pos++\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-07-08_22-57-25",
+            "content": "@@ -159,19 +159,8 @@\n %09%7D%0A%0A\n-%09r = r %25 t%0A\n %09nov\n@@ -194,68 +194,8 @@\n = 0%0A\n-%09for i := r; i %3C t; i++ %7B%0A%09%09novo%5Bpos%5D = vetor%5Bi%5D%0A%09%09pos++%0A%09%7D%0A\n %09for\n@@ -238,16 +238,17 @@\n vetor%5Bi%5D\n+ \n %0A%09%09pos++\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-07-08_23-01-50",
+            "content": "@@ -179,39 +179,153 @@\n  := \n-append(vetor%5Br:%5D, vetor%5B:r%5D...)\n+make(%5B%5Dint, t)%0A%0A%09pos := 0%0A%09for i := r; i %3C t; i++ %7B%0A%09%09novo%5Bpos%5D = vetor%5Bi%5D%0A%09%09pos++%0A%09%7D%0A%09for i := 0; i %3C r; i++ %7B%0A%09%09novo%5Bpos%5D = vetor%5Bi%5D%0A%09%09pos++%0A%09%7D\n %0A%0A%09f\n@@ -335,16 +335,17 @@\n Println(\n-novo\n+vetor\n )%0A%7D%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-07-08_23-03-53",
+            "content": "@@ -77,17 +77,16 @@\n can(&r)%0A\n-%0A\n %09vetor :\n@@ -102,16 +102,17 @@\n int, t)%0A\n+%0A\n %09for i :\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-07-08_23-05-02",
+            "content": "@@ -188,18 +188,16 @@\n d(vetor%5B\n-t-\n r:%5D, vet\n@@ -204,17 +204,16 @@\n or%5B:\n-t-\n r%5D...)%0A\n+%0A\n %09fmt\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-07-08_23-08-50",
+            "content": "@@ -25,125 +25,8 @@\n t%22%0A%0A\n-func printFormat(v %5B%5Dint) %7B%0A%09fmt.Print(%22%5B%5D%22)%0A%09for _, x := range v %7B%0A%09%09fmt.Printf(%22%C2%B7%25d%22, x)%0A%09%7D%0A%09fmt.Println(%22%C2%B7%5D %22)%0A%7D%0A%0A\n func\n@@ -35,16 +35,16 @@\n ain() %7B%0A\n+\n %09var t, \n@@ -167,23 +167,20 @@\n  r %25 t%0A%09\n-rotated\n+novo\n  := appe\n@@ -216,27 +216,24 @@\n .)%0A%09\n-printFormat(rotated\n+fmt.Println(novo\n )%0A%7D%0A\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-07-08_23-11-01",
+            "content": "@@ -62,16 +62,17 @@\n Print(%22%5B\n+%5D\n %22)%0A%09for \n@@ -103,17 +103,17 @@\n Printf(%22\n- \n+%C2%B7\n %25d%22, x)%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-07-08_23-11-38",
+            "content": "@@ -132,10 +132,11 @@\n ln(%22\n+%C2%B7%5D\n  \n-%5D\n %22)%0A%7D\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-07-08_23-12-03",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc printFormat(v []int) {\n\tfmt.Print(\"[\")\n\tfor _, x := range v {\n\t\tfmt.Printf(\" %d\", x)\n\t}\n\tfmt.Println(\" ]\")\n}\n\nfunc main() {\n\tvar t, r int\n\tfmt.Scan(&t)\n\tfmt.Scan(&r)\n\n\tvetor := make([]int, t)\n\tfor i := 0; i < t; i++ {\n\t\tfmt.Scan(&vetor[i])\n\t}\n\n\tr = r % t\n\trotated := append(vetor[t-r:], vetor[:t-r]...)\n\tprintFormat(rotated)\n}\n",
+            "lines": "26"
+        }
+    ]
+}
