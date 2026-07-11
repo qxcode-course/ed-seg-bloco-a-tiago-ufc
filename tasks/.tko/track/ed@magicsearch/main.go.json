@@ -1,0 +1,69 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-10_22-26-49",
+            "content": "@@ -134,108 +134,8 @@\n alue\n-%0A%0A%09last := 0%0A%09for i := 0; i %3C len(slice)-1; i++ %7B%0A%09%09if slice%5Bi%5D == value %7B%0A%09%09%09last = slice%5Bi%5D%0A%09%09%7D%0A%09%7D\n %0A%09re\n@@ -143,12 +143,9 @@\n urn \n-last\n+0\n %0A%7D%0A%0A\n@@ -397,16 +397,17 @@\n lue)%0A%09%7D%0A\n+%0A\n %09scanner\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-07-10_22-33-14",
+            "content": "@@ -170,16 +170,18 @@\n n(slice)\n+-1\n ; i++ %7B%0A\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-07-10_22-33-33",
+            "content": "@@ -110,16 +110,38 @@\n ) int %7B%0A\n+%09_, _ = slice, value%0A%0A\n %09last :=\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-07-10_22-34-20",
+            "content": "@@ -191,17 +191,24 @@\n %09last = \n-i\n+slice%5Bi%5D\n %0A%09%09%7D%0A%09%7D%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-07-10_22-35-45",
+            "content": "@@ -125,18 +125,8 @@\n = 0%0A\n-%09pos := 0%0A\n %09for\n@@ -202,103 +202,22 @@\n %09%7D%0A%09\n-%09if slice%5Bi%5D %3E value %7B%0A%09%09%09pos = i%0A%09%09%7D%0A%09%7D%0A%09if last %3E 0 %7B%0A%09%09return last%0A%09%7D else %7B%0A%09%09return pos%0A%09%7D\n+%7D%0A%09return last\n %0A%7D%0A%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-07-10_23-13-34",
+            "content": "@@ -216,24 +216,16 @@\n %09if \n-value %3C \n slice%5Bi%5D\n  %7B%0A%09\n@@ -220,16 +220,24 @@\n slice%5Bi%5D\n+ %3E value\n  %7B%0A%09%09%09po\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-07-10_23-14-46",
+            "content": "@@ -292,57 +292,8 @@\n e %7B%0A\n-%09%09if pos == 0 %7B%0A%09%09%09return len(slice)%0A%09%09%7D else %7B%0A%09\n %09%09re\n@@ -301,20 +301,16 @@\n urn pos%0A\n-%09%09%7D%0A\n %09%7D%0A%7D%0A%0Afu\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-07-10_23-16-55",
+            "content": "@@ -216,46 +216,24 @@\n %09if \n-slice%5Bi%5D %3E= value && pos == len(\n+value %3C \n slice\n-)\n+%5Bi%5D\n  %7B%0A%09\n@@ -280,17 +280,74 @@\n  last%0A%09%7D\n-%0A\n+ else %7B%0A%09%09if pos == 0 %7B%0A%09%09%09return len(slice)%0A%09%09%7D else %7B%0A%09%09\n %09return \n@@ -350,16 +350,23 @@\n urn pos%0A\n+%09%09%7D%0A%09%7D%0A\n %7D%0A%0Afunc \n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-07-10_23-20-54",
+            "content": "@@ -119,18 +119,17 @@\n last := \n--1\n+0\n %0A%09pos :=\n@@ -284,13 +284,11 @@\n ast \n-!= -1\n+%3E 0\n  %7B%0A%09\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-07-10_23-22-08",
+            "content": "@@ -130,26 +130,17 @@\n %09pos := \n-len(slice)\n+0\n %0A%09for i \n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-07-10_23-24-22",
+            "content": "@@ -63,19 +63,16 @@\n ngs%22%0A)%0A%0A\n-// \n func Mag\n@@ -110,19 +110,16 @@\n ) int %7B%0A\n-// \n %09last :=\n@@ -122,19 +122,16 @@\n t := -1%0A\n-// \n %09pos := \n@@ -141,19 +141,16 @@\n (slice)%0A\n-// \n %09for i :\n@@ -176,19 +176,16 @@\n ; i++ %7B%0A\n-// \n %09%09if sli\n@@ -201,19 +201,16 @@\n value %7B%0A\n-// \n %09%09%09last \n@@ -213,26 +213,20 @@\n ast = i%0A\n-// \n %09%09%7D%0A\n-// \n %09%09if sli\n@@ -263,19 +263,16 @@\n lice) %7B%0A\n-// \n %09%09%09pos =\n@@ -278,24 +278,15 @@\n = i%0A\n-// \n %09%09%7D%0A\n-// %09%7D%0A// \n+%09%7D%0A\n %09if \n@@ -298,19 +298,16 @@\n != -1 %7B%0A\n-// \n %09%09return\n@@ -316,419 +316,8 @@\n ast%0A\n-// %09%7D%0A// %09return pos%0A// %7D%0A%0Afunc MagicSearch(slice %5B%5Dint, value int) int %7B%0A%09n := len(slice)%0A%09if n == 0 %7B%0A%09%09return 0%0A%09%7D%0A%0A%09left, right := 0, n-1%0A%09pos := n%0A%09found := -1%0A%0A%09for left %3C= right %7B%0A%09%09mid := (left + right) / 2%0A%0A%09%09if slice%5Bmid%5D == value %7B%0A%09%09%09found = mid%0A%09%09%09left = mid + 1%0A%09%09%7D else if slice%5Bmid%5D %3C value %7B%0A%09%09%09left = mid + 1%0A%09%09%7D else %7B%0A%09%09%09pos = mid%0A%09%09%09right = mid - 1%0A%09%09%7D%0A%09%7D%0A%0A%09if found != -1 %7B%0A%09%09return found%0A\n %09%7D%0A%09\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-07-10_23-27-23",
+            "content": "@@ -469,16 +469,17 @@\n rn 0%0A%09%7D%0A\n+%0A\n %09left, r\n@@ -516,16 +516,17 @@\n d := -1%0A\n+%0A\n %09for lef\n@@ -566,16 +566,17 @@\n ht) / 2%0A\n+%0A\n %09%09if sli\n@@ -728,16 +728,17 @@\n %0A%09%09%7D%0A%09%7D%0A\n+%0A\n %09if foun\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-07-10_23-30-54",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\n// func MagicSearch(slice []int, value int) int {\n// \tlast := -1\n// \tpos := len(slice)\n// \tfor i := 0; i < len(slice); i++ {\n// \t\tif slice[i] == value {\n// \t\t\tlast = i\n// \t\t}\n// \t\tif slice[i] >= value && pos == len(slice) {\n// \t\t\tpos = i\n// \t\t}\n// \t}\n// \tif last != -1 {\n// \t\treturn last\n// \t}\n// \treturn pos\n// }\n\nfunc MagicSearch(slice []int, value int) int {\n\tn := len(slice)\n\tif n == 0 {\n\t\treturn 0\n\t}\n\tleft, right := 0, n-1\n\tpos := n\n\tfound := -1\n\tfor left <= right {\n\t\tmid := (left + right) / 2\n\t\tif slice[mid] == value {\n\t\t\tfound = mid\n\t\t\tleft = mid + 1\n\t\t} else if slice[mid] < value {\n\t\t\tleft = mid + 1\n\t\t} else {\n\t\t\tpos = mid\n\t\t\tright = mid - 1\n\t\t}\n\t}\n\tif found != -1 {\n\t\treturn found\n\t}\n\treturn pos\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Fields(scanner.Text())\n\tslice := make([]int, 0, 1)\n\tfor _, elem := range parts[1 : len(parts)-1] {\n\t\tvalue, _ := strconv.Atoi(elem)\n\t\tslice = append(slice, value)\n\t}\n\tscanner.Scan()\n\tvalue, _ := strconv.Atoi(scanner.Text())\n\tresult := MagicSearch(slice, value)\n\tfmt.Println(result)\n}\n",
+            "lines": "67"
+        }
+    ]
+}

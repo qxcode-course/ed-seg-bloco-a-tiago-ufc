@@ -12,16 +12,15 @@ sources:
   type: local
   writeable: true
   quests: null
-expanded:
-- ed@vector
+expanded: []
 flags:
   inbox: all
-  panel: skills
+  panel: graph
   task_graph_mode: time
   show_time: 'true'
 audit:
   enabled: true
   interval_seconds: null
 lang: go
-selected: ed@vetbuild
+selected: ed@list
 selected_index: 4
