@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-12_13-47-10",
+            "content": "@@ -764,17 +764,17 @@\n p() != '\n-%5D\n+(\n ' %7B%0A%09%09%09%09\n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-07-12_13-49-11",
+            "content": "@@ -764,17 +764,17 @@\n p() != '\n-%5B\n+%5D\n ' %7B%0A%09%09%09%09\n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-07-12_13-49-25",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\ntype Stack[T any] struct {\n\tdata []T\n}\n\nfunc (s *Stack[T]) IsEmpty() bool {\n\treturn len(s.data) == 0\n}\n\nfunc (s *Stack[T]) Pop() T {\n\tif s.IsEmpty() {\n\t\tpanic(\"stack is empty\")\n\t}\n\tvalue := s.data[len(s.data)-1]\n\ts.data = s.data[:len(s.data)-1]\n\treturn value\n}\n\nfunc (s *Stack[T]) Push(value T) {\n\ts.data = append(s.data, value)\n}\n\nfunc NewStack[T any]() *Stack[T] {\n\treturn &Stack[T]{data: []T{}}\n}\n\nfunc ehBalanceado(s string) bool {\n\tpilha := NewStack[rune]()\n\tfor _, ch := range s {\n\t\tswitch ch {\n\t\tcase '(', '[':\n\t\t\tpilha.Push(ch)\n\t\tcase ')':\n\t\t\tif pilha.IsEmpty() {\n\t\t\t\treturn false\n\t\t\t}\n\t\t\tif pilha.Pop() != '(' {\n\t\t\t\treturn false\n\t\t\t}\n\t\tcase ']':\n\t\t\tif pilha.IsEmpty() {\n\t\t\t\treturn false\n\t\t\t}\n\t\t\tif pilha.Pop() != '[' {\n\t\t\t\treturn false\n\t\t\t}\n\t\t}\n\t}\n\treturn pilha.IsEmpty()\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tinput := scanner.Text()\n\tif ehBalanceado(input) {\n\t\tfmt.Println(\"balanceado\")\n\t} else {\n\t\tfmt.Println(\"nao balanceado\")\n\t}\n}\n",
+            "lines": "68"
+        }
+    ]
+}

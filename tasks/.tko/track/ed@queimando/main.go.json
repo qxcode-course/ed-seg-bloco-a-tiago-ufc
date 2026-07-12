@@ -1,0 +1,69 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-12_12-16-30",
+            "content": "@@ -391,17 +391,16 @@\n  %5B%5DPos%7B%7B\n-%7B\n p.l, p.c\n@@ -420,20 +420,18 @@\n  1, p.c%7D\n-%7D\n , \n-%7B\n %7Bp.l, p.\n@@ -453,17 +453,16 @@\n 1, p.c%7D%7D\n-%7D\n %0A%7D%0A%0Afunc\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-07-12_12-17-13",
+            "content": "@@ -391,16 +391,17 @@\n  %5B%5DPos%7B%7B\n+%7B\n p.l, p.c\n@@ -421,18 +421,20 @@\n  1, p.c%7D\n+%7D\n , \n+%7B\n %7Bp.l, p.\n@@ -456,16 +456,17 @@\n 1, p.c%7D%7D\n+%7D\n %0A%7D%0A%0Afunc\n@@ -532,64 +532,8 @@\n s%5D()\n-%09%0A%09pos := Pos%7Bl: l, c: c%7D%0A%09visited := make(map%5BPos%5Dbool)\n %0A%09st\n@@ -562,29 +562,8 @@\n c%7D)%0A\n-%09visited%5Bpos%5D = true%0A\n %09for\n@@ -722,77 +722,24 @@\n %0A%09%09%09\n-if !visited%5Bneig%5D%7B%0A%09%09%09%09pilha.Push(neig)%0A%09%09%09%09visited%5Bneig%5D = true%0A%09%09%09%7D\n+pilha.Push(neig)\n %0A%09%09%7D\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-07-12_12-22-10",
+            "content": "@@ -539,17 +539,23 @@\n := Pos%7Bl\n-,\n+: l, c:\n  c%7D%0A%09vis\n@@ -593,19 +593,31 @@\n ck.Push(\n-p\n+P\n os\n+%7Bl: l, c: c%7D\n )%0A%09visit\n",
+            "lines": "83"
+        },
+        {
+            "label": "2026-07-12_12-24-43",
+            "content": "@@ -336,17 +336,17 @@\n d%5Bl%5D%5Bc%5D \n-=\n+!\n = value%0A\n",
+            "lines": "83"
+        },
+        {
+            "label": "2026-07-12_12-27-46",
+            "content": "@@ -524,16 +524,17 @@\n k%5BPos%5D()\n+%09\n %0A%09pos :=\n@@ -753,22 +753,16 @@\n  neig :=\n- range\n  getNeig\n@@ -790,17 +790,16 @@\n ed%5Bneig%5D\n- \n %7B%0A%09%09%09%09pi\n@@ -1428,27 +1428,16 @@\n for \n-i := 0; i %3C nl; i++\n+range nl\n  %7B%0A%09\n",
+            "lines": "83"
+        },
+        {
+            "label": "2026-07-12_12-30-21",
+            "content": "@@ -802,21 +802,21 @@\n %5D %7B%0A%09%09%09%09\n-stack\n+pilha\n .Push(ne\n",
+            "lines": "83"
+        },
+        {
+            "label": "2026-07-12_12-30-34",
+            "content": "@@ -289,17 +289,17 @@\n  %3C 0 %7C%7C \n-l\n+1\n  %3E= nl %7B\n@@ -856,16 +856,368 @@\n %0A%09%09%7D%0A%09%7D%0A\n+%0A%09// _, _, _ = mat, l, c%0A%09// Essa fun%C3%A7%C3%A3o deve usar uma list como pilha%0A%09// e marcar as %C3%A1rvores na matriz como queimados%0A%09// Uma sugest%C3%A3o de como fazer isso %C3%A9:%0A%09// - adicionar a primeira posi%C3%A7%C3%A3o na pilha%0A%09// - enquanto a pilha n%C3%A3o estiver vazia:%0A%09//   - retirar o elemento do topo%0A%09//   - se puder ser queimado, queime e adicione seus vizinhos %C3%A0 pilha%0A%0A\n %7D%0A%0Afunc \n",
+            "lines": "83"
+        },
+        {
+            "label": "2026-07-12_12-31-42",
+            "content": "@@ -461,144 +461,8 @@\n %0A%7D%0A%0A\n-func is_inside(grid %5B%5D%5B%5Drune, pos Pos) bool %7B%0A%09nl, nc := get_size(grid)%0A%09return pos.l %3E= 0 && pos.l %3C nl && pos.c %3E= 0 && pos.c %3C nc%0A%7D%0A%0A\n func\n@@ -779,109 +779,8 @@\n ) %7B%0A\n-%09%09%09if is_value(grid, neig, '#') %7B%0A%09%09%09%09continue%0A%09%09%09%7D%0A%09%09%09if !is_inside(grid, neig) %7B%0A%09%09%09%09continue%0A%09%09%09%7D%0A\n %09%09%09i\n",
+            "lines": "73"
+        },
+        {
+            "label": "2026-07-12_12-39-54",
+            "content": "@@ -661,16 +661,34 @@\n %5BPos%5D()%0A\n+%09pos := Pos%7Bl, c%7D%0A\n %09visited\n@@ -714,28 +714,8 @@\n ol)%0A\n-%09start := Pos%7Bl, c%7D%0A\n %09sta\n@@ -722,21 +722,19 @@\n ck.Push(\n-start\n+pos\n )%0A%09visit\n@@ -740,13 +740,11 @@\n ted%5B\n-start\n+pos\n %5D = \n@@ -795,33 +795,31 @@\n .Pop()%0A%09%09if \n-!\n is_\n-insid\n+valu\n e(grid, elem\n@@ -822,60 +822,14 @@\n elem\n-) %7B%0A%09%09%09continue%0A%09%09%7D%0A%09%09if grid%5Belem.l%5D%5Belem.c%5D != '.'\n+, '#')\n  %7B%0A%09\n@@ -921,17 +921,15 @@\n %09if \n-!\n is_\n-insid\n+valu\n e(gr\n@@ -936,16 +936,21 @@\n id, neig\n+, '#'\n ) %7B%0A%09%09%09%09\n@@ -973,35 +973,30 @@\n %09if \n-grid%5Bneig.l%5D%5Bneig.c%5D != '.'\n+!is_inside(grid, neig)\n  %7B%0A%09\n@@ -1043,49 +1043,49 @@\n %09%09%09%09\n-visited%5Bneig%5D = true%0A%09%09%09%09stack.Push(neig)\n+stack.Push(neig)%0A%09%09%09%09visited%5Bneig%5D = true\n %0A%09%09%09\n",
+            "lines": "84"
+        },
+        {
+            "label": "2026-07-12_12-42-11",
+            "content": "@@ -901,68 +901,8 @@\n %09%09%7D%0A\n-%09%09if visited%5Belem%5D %7B%0A%09%09%09continue%0A%09%09%7D%0A%09%09visited%5Belem%5D = true%0A\n %09%09gr\n@@ -971,16 +971,17 @@\n %7B%0A%09%09%09if \n+!\n is_insid\n@@ -994,18 +994,41 @@\n , neig) \n-&&\n+%7B%0A%09%09%09%09continue%0A%09%09%09%7D%0A%09%09%09if\n  grid%5Bne\n@@ -1045,17 +1045,17 @@\n .c%5D \n-=\n+!\n = '.' %7B%0A\n %09%09%09%09\n@@ -1050,16 +1050,82 @@\n = '.' %7B%0A\n+%09%09%09%09continue%0A%09%09%09%7D%0A%09%09%09if !visited%5Bneig%5D %7B%0A%09%09%09%09visited%5Bneig%5D = true%0A\n %09%09%09%09stac\n",
+            "lines": "87"
+        },
+        {
+            "label": "2026-07-12_12-44-13",
+            "content": "@@ -731,16 +731,39 @@\n (start)%0A\n+%09visited%5Bstart%5D = true%0A\n %09for !st\n",
+            "lines": "84"
+        },
+        {
+            "label": "2026-07-12_12-45-05",
+            "content": "@@ -853,17 +853,17 @@\n .c%5D != '\n-#\n+.\n ' %7B%0A%09%09%09c\n@@ -1062,9 +1062,9 @@\n == '\n-#\n+.\n ' %7B%0A\n",
+            "lines": "83"
+        },
+        {
+            "label": "2026-07-12_12-49-54",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\ntype Pos struct {\n\tl, c int\n}\n\nfunc get_size(grid [][]rune) (int, int) {\n\treturn len(grid), len(grid[0])\n}\n\nfunc is_value(grid [][]rune, pos Pos, value rune) bool {\n\tnl, nc := get_size(grid)\n\tl := pos.l\n\tc := pos.c\n\tif c < 0 || c >= nc || l < 0 || l >= nl {\n\t\treturn false\n\t}\n\treturn grid[l][c] == value\n}\n\nfunc getNeig(p Pos) []Pos {\n\treturn []Pos{{p.l, p.c - 1}, {p.l - 1, p.c}, {p.l, p.c + 1}, {p.l + 1, p.c}}\n}\n\nfunc is_inside(grid [][]rune, pos Pos) bool {\n\tnl, nc := get_size(grid)\n\treturn pos.l >= 0 && pos.l < nl && pos.c >= 0 && pos.c < nc\n}\n\nfunc burnTrees(grid [][]rune, l, c int) {\n\tstack := NewStack[Pos]()\n\tvisited := make(map[Pos]bool)\n\tstart := Pos{l, c}\n\tstack.Push(start)\n\tfor !stack.IsEmpty() {\n\t\telem := stack.Pop()\n\t\tif !is_inside(grid, elem) {\n\t\t\tcontinue\n\t\t}\n\t\tif grid[elem.l][elem.c] != '#' {\n\t\t\tcontinue\n\t\t}\n\t\tif visited[elem] {\n\t\t\tcontinue\n\t\t}\n\t\tvisited[elem] = true\n\t\tgrid[elem.l][elem.c] = 'o'\n\t\tfor _, neig := range getNeig(elem) {\n\t\t\tif is_inside(grid, neig) && grid[neig.l][neig.c] == '#' {\n\t\t\t\tstack.Push(neig)\n\t\t\t}\n\t\t}\n\t}\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tvar nl, nc, lfire, cfire int\n\tfmt.Sscanf(line, \"%d %d %d %d\", &nl, &nc, &lfire, &cfire)\n\n\tgrid := make([][]rune, 0, nl)\n\tfor i := 0; i < nl; i++ {\n\t\tscanner.Scan()\n\t\tline := []rune(scanner.Text())\n\t\tgrid = append(grid, line)\n\t}\n\tburnTrees(grid, lfire, cfire)\n\tshowGrid(grid)\n}\n\nfunc showGrid(mat [][]rune) {\n\tfor _, linha := range mat {\n\t\tfmt.Println(string(linha))\n\t}\n}\n",
+            "lines": "83"
+        }
+    ]
+}

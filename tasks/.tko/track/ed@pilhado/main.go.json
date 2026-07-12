@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-12_13-45-45",
+            "content": "@@ -45,554 +45,4 @@\n %0A)%0A%0A\n-type Pos struct %7B%0A%09l, c int%0A%7D%0A%0Afunc vizinhos(p Pos) %5B%5DPos %7B%0A%09return %5B%5DPos%7B%0A%09%09%7Bp.l, p.c - 1%7D,%0A%09%09%7Bp.l - 1, p.c%7D,%0A%09%09%7Bp.l, p.c + 1%7D,%0A%09%09%7Bp.l + 1, p.c%7D,%0A%09%7D%0A%7D%0A%0Afunc main() %7B%0A%09scanner := bufio.NewScanner(os.Stdin)%0A%09scanner.Scan()%0A%09var nl, nc int%0A%09fmt.Sscanf(scanner.Text(), %22%25d %25d%22, &nl, &nc)%0A%09mat := make(%5B%5D%5B%5Drune, nl)%0A%09var ini, fim Pos%0A%0A%09for i := 0; i %3C nl; i++ %7B%0A%09%09scanner.Scan()%0A%09%09linha := %5B%5Drune(scanner.Text())%0A%09%09mat%5Bi%5D = linha%0A%09%09for j, ch := range linha %7B%0A%09%09%09if ch == 'I' %7B%0A%09%09%09%09ini = Pos%7Bi, j%7D%0A%09%09%09%7D%0A%09%09%09if ch == 'F' %7B%0A%09%09%09%09fim = Pos%7Bi, j%7D%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%7D%0A\n",
+            "lines": "8"
+        },
+        {
+            "label": "2026-07-12_14-44-15",
+            "content": "@@ -358,11 +358,8 @@\n l)%0A%09\n-// \n var \n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-07-12_14-44-42",
+            "content": "@@ -76,119 +76,8 @@\n %0A%7D%0A%0A\n-func inside(mat %5B%5D%5B%5Drune, p Pos) bool %7B%0A%09return p.l %3E= 0 && p.l %3C len(mat) && p.c %3E= 0 && p.c %3C len(mat%5B0%5D)%0A%7D%0A%0A\n func\n@@ -101,16 +101,16 @@\n %5B%5DPos %7B%0A\n+\n %09return \n@@ -212,42 +212,8 @@\n ) %7B%0A\n-%09var nl, nc int%0A%09var ini, fim Pos%0A\n %09sca\n@@ -263,16 +263,32 @@\n .Scan()%0A\n+%09var nl, nc int%0A\n %09fmt.Ssc\n@@ -353,16 +353,38 @@\n ne, nl)%0A\n+%09// var ini, fim Pos%0A%0A\n %09for i :\n@@ -576,24 +576,24 @@\n = Pos%7Bi, j%7D%0A\n+\n %09%09%09%7D%0A%09%09%7D%0A%09%7D%0A\n@@ -596,494 +596,6 @@\n %0A%09%7D%0A\n-%09caminho := NewStack%5BPos%5D()%0A%09becos := NewStack%5BPos%5D()%0A%09visitado := make(map%5BPos%5Dbool)%0A%09caminho.Push(ini)%0A%0A%09for !caminho.IsEmpty() %7B%0A%09%09atual := caminho.Top()%0A%09%09visitado%5Batual%5D = true%0A%09%09if atual == fim %7B%0A%09%09%09break%0A%09%09%7D%0A%09%09validos := %5B%5DPos%7B%7D%0A%09%09for _, v := range vizinhos(atual) %7B%0A%09%09%09if inside(mat, v) && mat%5Bv.l%5D%5Bv.c%5D != '#' && !visitados%5Bv%5D %7B%0A%09%09%09%09validos = append(validos, v)%0A%09%09%09%7D%0A%09%09%7D%0A%09%09if len(validos) %3E 0 %7B%0A%09%09%09caminho.Push(validos%5B0%5D)%0A%09%09%7D else %7B%0A%09%09%09becos.Push(atual)%0A%09%09%09caminho.Pop()%0A%09%09%7D%0A%09%7D%0A\n %7D%0A\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-07-12_14-53-20",
+            "content": "@@ -1030,16 +1030,17 @@\n visitado\n+s\n %5Bv%5D %7B%0A%09%09\n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-07-12_14-54-19",
+            "content": "@@ -1190,67 +1190,6 @@\n %0A%09%7D%0A\n-%09for _, linha := range mat %7B%0A%09%09fmt.Println(string(linha))%0A%09%7D%0A\n %7D%0A\n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-07-12_14-54-41",
+            "content": "@@ -1190,201 +1190,8 @@\n %0A%09%7D%0A\n-%09for !becos.IsEmpty() %7B%0A%09%09b := becos.Pop()%0A%09%09if mat%5Bb.l%5D%5Bb.c%5D == '.' %7B%0A%09%09%09mat%5Bb.l%5D%5Bb.c%5D = ' '%0A%09%09%7D%0A%09%7D%0A%09for _, p := range caminho.data %7B%0A%09%09if mat%5Bp.l%5D%5Bp.c%5D == ' ' %7B%0A%09%09%09mat%5Bp.l%5D%5Bp.c%5D = '.'%0A%09%09%7D%0A%09%7D%0A\n %09for\n",
+            "lines": "73"
+        },
+        {
+            "label": "2026-07-12_14-57-23",
+            "content": "@@ -1350,56 +1350,8 @@\n  ' '\n- %7C%7C mat%5Bp.l%5D%5Bp.c%5D == 'I' %7C%7C mat%5Bp.l%5D%5Bp.c%5D == 'F'\n  %7B%0A%09\n",
+            "lines": "84"
+        },
+        {
+            "label": "2026-07-12_14-58-42",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\ntype Pos struct {\n\tl, c int\n}\n\nfunc inside(mat [][]rune, p Pos) bool {\n\treturn p.l >= 0 && p.l < len(mat) && p.c >= 0 && p.c < len(mat[0])\n}\n\nfunc vizinhos(p Pos) []Pos {\n\treturn []Pos{\n\t\t{p.l, p.c - 1},\n\t\t{p.l - 1, p.c},\n\t\t{p.l, p.c + 1},\n\t\t{p.l + 1, p.c},\n\t}\n}\n\nfunc main() {\n\tvar nl, nc int\n\tvar ini, fim Pos\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tfmt.Sscanf(scanner.Text(), \"%d %d\", &nl, &nc)\n\tmat := make([][]rune, nl)\n\tfor i := 0; i < nl; i++ {\n\t\tscanner.Scan()\n\t\tlinha := []rune(scanner.Text())\n\t\tmat[i] = linha\n\t\tfor j, ch := range linha {\n\t\t\tif ch == 'I' {\n\t\t\t\tini = Pos{i, j}\n\t\t\t}\n\t\t\tif ch == 'F' {\n\t\t\t\tfim = Pos{i, j}\n\t\t\t}\n\t\t}\n\t}\n\tcaminho := NewStack[Pos]()\n\tbecos := NewStack[Pos]()\n\tvisitado := make(map[Pos]bool)\n\tcaminho.Push(ini)\n\n\tfor !caminho.IsEmpty() {\n\t\tatual := caminho.Top()\n\t\tvisitado[atual] = true\n\t\tif atual == fim {\n\t\t\tbreak\n\t\t}\n\t\tvalidos := []Pos{}\n\t\tfor _, v := range vizinhos(atual) {\n\t\t\tif inside(mat, v) && mat[v.l][v.c] != '#' && !visitado[v] {\n\t\t\t\tvalidos = append(validos, v)\n\t\t\t}\n\t\t}\n\t\tif len(validos) > 0 {\n\t\t\tcaminho.Push(validos[0])\n\t\t} else {\n\t\t\tbecos.Push(atual)\n\t\t\tcaminho.Pop()\n\t\t}\n\t}\n\tfor !becos.IsEmpty() {\n\t\tb := becos.Pop()\n\t\tif mat[b.l][b.c] == '.' {\n\t\t\tmat[b.l][b.c] = ' '\n\t\t}\n\t}\n\tfor _, p := range caminho.data {\n\t\tif mat[p.l][p.c] == ' ' || mat[p.l][p.c] == 'I' || mat[p.l][p.c] == 'F' {\n\t\t\tmat[p.l][p.c] = '.'\n\t\t}\n\t}\n\tfor _, linha := range mat {\n\t\tfmt.Println(string(linha))\n\t}\n}\n",
+            "lines": "84"
+        }
+    ]
+}
