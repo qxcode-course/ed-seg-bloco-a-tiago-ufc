@@ -13,7 +13,7 @@ sources:
   writeable: true
   quests: null
 expanded:
-- ed@backtrack
+- ed@tree
 flags:
   inbox: all
   panel: skills
@@ -23,5 +23,5 @@ audit:
   enabled: true
   interval_seconds: null
 lang: go
-selected: ed@subset_sum
-selected_index: 7
+selected: ed@serial
+selected_index: 8

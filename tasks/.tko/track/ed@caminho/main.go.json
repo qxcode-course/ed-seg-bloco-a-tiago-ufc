@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-12_17-11-59",
+            "content": "@@ -494,176 +494,9 @@\n tar(\n-grid %5B%5D%5B%5Drune, pai map%5BPos%5DPos, ini Pos, fim Pos) %7B%0A%09atual := fim%0A%09for atual != ini %7B%0A%09%09grid%5Batual.l%5D%5Batual.c%5D = '.'%0A%09%09atual = pai%5Batual%5D%0A%09%7D%0A%09grid%5Bini.l%5D%5Bini.c%5D = '.'%0A%7D\n+)\n %0A%0Afu\n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-07-12_17-16-50",
+            "content": "@@ -446,440 +446,22 @@\n  %7B%0A%09\n-fila := NewQueue%5BPos%5D()%0A%09fila.Enqueue(startPos)%0A%09visitado := make(map%5BPos%5Dbool)%0A%09pai := make(map%5BPos%5Dpos)%0A%09achou := false%0A%09for !fila.IsEmpty() %7B%0A%09%09atual, _ := fila.Dequeue()%0A%09%09if atual == endPos %7B%0A%09%09%09achou = true%0A%09%09%09break%0A%09%09%7D%0A%09%09for _, v := range vizinhos(atual) %7B%0A%09%09%09if inside(grid, v) && grid%5Bv.l%5D%5Bv.c%5D != '#' && !visitado%5Bv%5D %7B%0A%09%09%09%09visitado%5Bv%5D = true%0A%09%09%09%09pai%5Bv%5D = atual%0A%09%09%09%09fila.Enqueue(v)%0A%09%09%09%7D%0A%09%09%7D%0A%09%09if achou %7B%0A%09%09%09voltar(grid, pai\n+_, _, _ = grid\n , st\n@@ -478,16 +478,8 @@\n dPos\n-)%0A%09%09%7D%0A%09%7D\n %0A%7D%0A%0A\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-07-12_17-25-10",
+            "content": "@@ -543,17 +543,17 @@\n map%5BPos%5D\n-P\n+p\n os)%0A%09ach\n",
+            "lines": "98"
+        },
+        {
+            "label": "2026-07-12_17-25-30",
+            "content": "@@ -390,130 +390,8 @@\n %0A%7D%0A%0A\n-func vizinhos(p Pos) %5B%5DPos %7B%0A%09return %5B%5DPos%7B%0A%09%09%7Bp.l, p.c - 1%7D,%0A%09%09%7Bp.l - 1, p.c%7D,%0A%09%09%7Bp.l, p.c + 1%7D,%0A%09%09%7Bp.l + 1, p.c%7D,%0A%09%7D%0A%7D%0A%0A\n func\n",
+            "lines": "98"
+        },
+        {
+            "label": "2026-07-12_17-26-45",
+            "content": "@@ -1451,22 +1451,16 @@\n  := \n-0; i %3C nl; i++\n+range nl\n  %7B%0A%09\n@@ -1652,22 +1652,16 @@\n  := \n-0; c %3C nc; c++\n+range nc\n  %7B%0A%09\n",
+            "lines": "107"
+        },
+        {
+            "label": "2026-07-12_17-28-27",
+            "content": "@@ -965,18 +965,16 @@\n %09%7D%0A%09%09%7D%0A%09\n-%7D%0A\n %09if acho\n@@ -977,16 +977,17 @@\n achou %7B%0A\n+%09\n %09%09voltar\n@@ -1016,16 +1016,20 @@\n endPos)%0A\n+%09%09%7D%0A\n %09%7D%0A%7D%0A%0Afu\n",
+            "lines": "107"
+        },
+        {
+            "label": "2026-07-12_17-29-10",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\ntype Pos struct {\n\tl, c int\n}\n\nfunc (p Pos) getNeig() []Pos {\n\treturn nil\n}\n\nfunc inside(grid [][]rune, pos Pos) bool {\n\tnrows := len(grid)\n\tncols := len(grid[0])\n\treturn pos.l >= 0 && pos.l < nrows && pos.c >= 0 && pos.c < ncols\n}\n\nfunc match(grid [][]rune, pos Pos, char rune) bool {\n\treturn inside(grid, pos) && grid[pos.l][pos.c] == char\n}\n\nfunc vizinhos(p Pos) []Pos {\n\treturn []Pos{\n\t\t{p.l, p.c - 1},\n\t\t{p.l - 1, p.c},\n\t\t{p.l, p.c + 1},\n\t\t{p.l + 1, p.c},\n\t}\n}\n\nfunc search(grid [][]rune, startPos Pos, endPos Pos) {\n\tfila := NewQueue[Pos]()\n\tfila.Enqueue(startPos)\n\tvisitado := make(map[Pos]bool)\n\tpai := make(map[Pos]Pos)\n\tachou := false\n\tfor !fila.IsEmpty() {\n\t\tatual, _ := fila.Dequeue()\n\t\tif atual == endPos {\n\t\t\tachou = true\n\t\t\tbreak\n\t\t}\n\t\tfor _, v := range vizinhos(atual) {\n\t\t\tif inside(grid, v) && grid[v.l][v.c] != '#' && !visitado[v] {\n\t\t\t\tvisitado[v] = true\n\t\t\t\tpai[v] = atual\n\t\t\t\tfila.Enqueue(v)\n\t\t\t}\n\t\t}\n\t}\n\tif achou {\n\t\tvoltar(grid, pai, startPos, endPos)\n\t}\n}\n\nfunc voltar(grid [][]rune, pai map[Pos]Pos, ini Pos, fim Pos) {\n\tatual := fim\n\tfor atual != ini {\n\t\tgrid[atual.l][atual.c] = '.'\n\t\tatual = pai[atual]\n\t}\n\tgrid[ini.l][ini.c] = '.'\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tvar nl, nc int\n\tscanner.Scan()\n\tline := scanner.Text()\n\tfmt.Sscanf(line, \"%d %d\", &nl, &nc)\n\tmat := make([][]rune, nl) // Inicializa a matriz de runes\n\n\t// Carregando matriz\n\tfor i := 0; i < nl; i++ {\n\t\tscanner.Scan()\n\t\tline := scanner.Text()\n\t\tmat[i] = []rune(line)\n\t}\n\n\tvar inicio, fim Pos\n\n\t// Procurando inicio e fim e colocando ' ' nas posi\u00e7\u00f5es iniciais\n\tfor l := range nl {\n\t\tfor c := 0; c < nc; c++ {\n\t\t\tif mat[l][c] == 'I' {\n\t\t\t\tmat[l][c] = ' '\n\t\t\t\tinicio = Pos{l, c}\n\t\t\t}\n\t\t\tif mat[l][c] == 'F' {\n\t\t\t\tmat[l][c] = ' '\n\t\t\t\tfim = Pos{l, c}\n\t\t\t}\n\t\t}\n\t}\n\n\tsearch(mat, inicio, fim)\n\n\tfor _, line := range mat {\n\t\tfmt.Println(string(line)) // Converte o slice de runes de volta para string para imprimir\n\t}\n}\n",
+            "lines": "107"
+        }
+    ]
+}

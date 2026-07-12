@@ -2,8 +2,43 @@
     "patches": [
         {
             "label": "2026-06-08_08-54-35",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    fmt.Println(\"Hello, World!\")\n}\n",
+            "content": "@@ -10,678 +10,66 @@\n ain%0A\n-%0A\n import \n-(%0A%09%22bufio%22%0A%09%22fmt%22%0A%09%22os%22%0A)%0A%0Afunc somaSub(a %5B%5Dint, k int) bool %7B%0A%09var bcktr func(i, soma int) bool%0A%09bcktr = func(i, soma int) bool %7B%0A%09%09if soma == k %7B%0A%09%09%09return true%0A%09%09%7D%0A%09%09if i == len(a) %7C%7C soma %3E k %7B%0A%09%09%09return false%0A%09%09%7D%0A%09%09if bcktr(i+1, soma+a%5Bi%5D) %7B%0A%09%09%09return true%0A%09%09%7D%0A%09%09if bcktr(i+1, soma) %7B%0A%09%09%09return true%0A%09%09%7D%0A%09%09return false%0A%09%7D%0A%09return bcktr(0, 0)%0A%7D%0A%0Afunc main() %7B%0A%09var n, k int%0A%09scanner := bufio.NewScanner(os.Stdin)%0A%09scanner.Scan()%0A%09fmt.Sscanf(scanner.Text(), %22%25d %25d%22, &n, &k)%0A%09a := make(%5B%5Dint, n)%0A%09scanner.Scan()%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09fmt.Sscanf(scanner.Text(), %22%25d%22, &a%5Bi%5D)%0A%09%7D%0A%09if somaSub(a, k) %7B%0A%09%09fmt.Println(%22true%22)%0A%09%7D else %7B%0A%09%09fmt.Println(%22false%22)%0A%09%7D\n+%22fmt%22%0Afunc main() %7B%0A    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
             "lines": "5"
+        },
+        {
+            "label": "2026-07-12_15-45-44",
+            "content": "@@ -42,16 +42,8 @@\n os%22%0A\n-%09%22sort%22%0A\n )%0A%0Af\n@@ -81,22 +81,8 @@\n l %7B%0A\n-%09sort.Ints(a)%0A\n %09var\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-07-12_15-49-06",
+            "content": "@@ -304,19 +304,16 @@\n e%0A%09%09%7D%0A%09%09\n-// \n if bcktr\n@@ -328,19 +328,16 @@\n ma) %7B%0A%09%09\n-// \n %09return \n@@ -347,11 +347,8 @@\n e%0A%09%09\n-// \n %7D%0A%09%09\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-07-12_15-51-18",
+            "content": "@@ -219,16 +219,28 @@\n = len(a)\n+ %7C%7C soma %3E k\n  %7B%0A%09%09%09re\n@@ -296,32 +296,35 @@\n turn true%0A%09%09%7D%0A%09%09\n+// \n if bcktr(i+1, so\n@@ -327,24 +327,27 @@\n , soma) %7B%0A%09%09\n+// \n %09return true\n@@ -345,24 +345,27 @@\n turn true%0A%09%09\n+// \n %7D%0A%09%09return f\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-07-12_15-51-43",
+            "content": "@@ -223,20 +223,8 @@\n n(a)\n- %7C%7C soma %3E k\n  %7B%0A%09\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-07-12_15-52-00",
+            "content": "@@ -38,16 +38,24 @@\n %22%0A%09%22os%22%0A\n+%09%22sort%22%0A\n )%0A%0Afunc \n@@ -85,16 +85,30 @@\n  bool %7B%0A\n+%09sort.Ints(a)%0A\n %09var bck\n@@ -219,16 +219,28 @@\n = len(a)\n+ %7C%7C soma %3E k\n  %7B%0A%09%09%09re\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-07-12_15-56-37",
+            "content": "@@ -18,19 +18,34 @@\n ort (%0A%09%22\n-fmt\n+bufio%22%0A%09%22fmt%22%0A%09%22os\n %22%0A)%0A%0Afun\n@@ -380,26 +380,108 @@\n , k int%0A\n+%09scanner := bufio.NewScanner(os.Stdin)%0A%09scanner.Scan()%0A\n %09fmt.S\n+s\n can\n-(\n+f(scanner.Text(), %22%25d %25d%22, \n &n, &k)%0A\n@@ -501,16 +501,32 @@\n int, n)%0A\n+%09scanner.Scan()%0A\n %09for i :\n@@ -550,20 +550,44 @@\n %0A%09%09fmt.S\n+s\n can\n-(\n+f(scanner.Text(), %22%25d%22, \n &a%5Bi%5D)%0A%09\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-07-12_16-03-24",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc somaSub(a []int, k int) bool {\n\tvar bcktr func(i, soma int) bool\n\tbcktr = func(i, soma int) bool {\n\t\tif soma == k {\n\t\t\treturn true\n\t\t}\n\t\tif i == len(a) {\n\t\t\treturn false\n\t\t}\n\t\tif bcktr(i+1, soma+a[i]) {\n\t\t\treturn true\n\t\t}\n\t\tif bcktr(i+1, soma) {\n\t\t\treturn true\n\t\t}\n\t\treturn false\n\t}\n\treturn bcktr(0, 0)\n}\n\nfunc main() {\n\tvar n, k int\n\tfmt.Scan(&n, &k)\n\ta := make([]int, n)\n\tfor i := 0; i < n; i++ {\n\t\tfmt.Scan(&a[i])\n\t}\n\tif somaSub(a, k) {\n\t\tfmt.Println(\"true\")\n\t} else {\n\t\tfmt.Println(\"false\")\n\t}\n}\n",
+            "lines": "39"
         }
     ]
 }

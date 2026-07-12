@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-12_16-20-57",
+            "content": "@@ -29,21 +29,14 @@\n io%22%0A\n-%09%22fmt%22%0A\n %09%22os%22%0A\n+\n )%0A%0Af\n@@ -80,17 +80,20 @@\n  bool %7B%0A\n-%09\n+    \n if pos =\n@@ -102,21 +102,26 @@\n len(seq)\n- \n %7B%0A\n-%09%09\n+        \n return t\n@@ -124,20 +124,26 @@\n rn true%0A\n-%09%7D%0A%09\n+    %7D%0A    \n if seq%5Bi\n@@ -164,13 +164,18 @@\n dig)\n- \n %7B%0A\n-%09%09\n+        \n retu\n@@ -187,12 +187,18 @@\n lse%0A\n-%09%7D%0A%09\n+    %7D%0A    \n retu\n@@ -324,17 +324,20 @@\n .Scan()%0A\n-%09\n+    \n var L in\n@@ -338,17 +338,20 @@\n r L int%0A\n-%09\n+    \n fmt.Ssca\n@@ -373,19 +373,20 @@\n (), \n-%22\n %25d\n-%22\n , &L)%0A\n-%09\n+    \n solv\n@@ -398,17 +398,20 @@\n , L, 0)%0A\n-%09\n+    \n fmt.Prin\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-07-12_16-21-32",
+            "content": "@@ -50,478 +50,117 @@\n unc \n-valido(seq %5B%5Drune, pos int, dig int, L int) bool %7B%0A%09for i := pos - L; i %3C pos; i++ %7B%0A%09%09if i %3E= 0 && seq%5Bi%5D == rune('0'+dig) %7B%0A%09%09%09return false%0A%09%09%7D%0A%09%7D%0A%09for i := pos + 1; i %3C= pos+L && i %3C len(seq); i++ %7B%0A%09%09if seq%5Bi%5D == rune('0'+dig) %7B%0A%09%09%09return false%0A%09%09%7D%0A%09%7D%0A%09return true%0A%7D%0A%0Afunc solve(seq %5B%5Drune, L int, pos int) bool %7B%0A%09if pos == len(seq) %7B%0A%09%09return true%0A%09%7D%0A%09if seq%5Bpos%5D != '.' %7B%0A%09%09d := int(seq%5Bpos%5D - '0')%0A%09%09if valido(seq, pos, d, L) %7B%0A%09%09%09return solve(seq, L, pos+1)%0A%09%09%7D\n+solve(seq %5B%5Drune, L int, pos int) bool %7B%0A%09if pos == len(seq) %7B%0A%09%09return true%0A%09%7D%0A%09if seq%5Bi%5D == rune('0'+dig) %7B\n %0A%09%09r\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-07-12_16-27-50",
+            "content": "@@ -539,168 +539,8 @@\n %0A%09%7D%0A\n-%09for d := 0; d %3C= L; d++ %7B%0A%09%09if valido(seq, pos, d, L) %7B%0A%09%09%09seq%5Bpos%5D = rune('0' + d)%0A%09%09%09if solve(seq, L, pos+1) %7B%0A%09%09%09%09return true%0A%09%09%09%7D%0A%09%09%09seq%5Bpos%5D = '.'%0A%09%09%7D%0A%09%7D%0A\n %09ret\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-07-12_16-29-46",
+            "content": "@@ -187,32 +187,139 @@\n rn false%0A%09%09%7D%0A%09%7D%0A\n+%09for i := pos + 1; i %3C= pos+L && i %3C len(seq); i++ %7B%0A%09%09if seq%5Bi%5D == rune('0'+dig) %7B%0A%09%09%09return false%0A%09%09%7D%0A%09%7D%0A\n %09return true%0A%7D%0A%0A\n@@ -315,16 +315,16 @@\n rn true%0A\n-\n %7D%0A%0Afunc \n@@ -425,16 +425,74 @@\n = '.' %7B%0A\n+%09%09d := int(seq%5Bpos%5D - '0')%0A%09%09if valido(seq, pos, d, L) %7B%0A%09\n %09%09return\n@@ -513,16 +513,35 @@\n  pos+1)%0A\n+%09%09%7D%0A%09%09return false%0A\n %09%7D%0A%09for \n@@ -703,20 +703,19 @@\n %09return \n-fals\n+tru\n e%0A%7D%0A%0Afun\n@@ -729,19 +729,8 @@\n ) %7B%0A\n-%09var L int%0A\n %09sca\n@@ -811,16 +811,16 @@\n Text())%0A\n-\n %09scanner\n@@ -827,16 +827,27 @@\n .Scan()%0A\n+%09var L int%0A\n %09fmt.Ssc\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-07-12_16-33-28",
+            "content": "@@ -199,115 +199,8 @@\n %0A%09%7D%0A\n-%09for i := pos + 1; i %3C= pos+L && i %3C len(seq); i++ %7B%0A%09%09if seq%5Bi%5D == rune('0'+dig) %7B%0A%09%09%09return false%0A%09%09%7D%0A%09%7D%0A\n %09ret\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-07-12_16-47-55",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc valido(seq []rune, pos int, dig int, L int) bool {\n\tfor i := pos - L; i < pos; i++ {\n\t\tif i >= 0 && seq[i] == rune('0'+dig) {\n\t\t\treturn false\n\t\t}\n\t}\n\tfor i := pos + 1; i <= pos+L && i < len(seq); i++ {\n\t\tif seq[i] == rune('0'+dig) {\n\t\t\treturn false\n\t\t}\n\t}\n\treturn true\n}\n\nfunc solve(seq []rune, L int, pos int) bool {\n\tif pos == len(seq) {\n\t\treturn true\n\t}\n\tif seq[pos] != '.' {\n\t\treturn solve(seq, L, pos+1)\n\t}\n\tfor d := 0; d <= L; d++ {\n\t\tif valido(seq, pos, d, L) {\n\t\t\tseq[pos] = rune('0' + d)\n\t\t\tif solve(seq, L, pos+1) {\n\t\t\t\treturn true\n\t\t\t}\n\t\t\tseq[pos] = '.'\n\t\t}\n\t}\n\treturn false\n}\n\nfunc main() {\n\tvar L int\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tseq := []rune(scanner.Text())\n\tscanner.Scan()\n\tfmt.Sscanf(scanner.Text(), \"%d\", &L)\n\tsolve(seq, L, 0)\n\tfmt.Println(string(seq))\n}\n",
+            "lines": "51"
+        }
+    ]
+}
