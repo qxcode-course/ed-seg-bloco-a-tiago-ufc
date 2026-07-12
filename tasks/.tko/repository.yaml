@@ -14,7 +14,7 @@ sources:
   quests: null
 expanded: []
 flags:
-  inbox: all
+  inbox: inbox
   panel: graph
   task_graph_mode: time
   show_time: 'true'
@@ -22,5 +22,5 @@ audit:
   enabled: true
   interval_seconds: null
 lang: go
-selected: ed@list
-selected_index: 4
+selected: ed@tree
+selected_index: 2
