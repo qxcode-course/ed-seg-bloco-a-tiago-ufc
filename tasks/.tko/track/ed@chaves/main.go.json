@@ -1,3 +1,49 @@
 {
-    "patches": []
+    "patches": [
+        {
+            "label": "2026-07-12_10-50-49",
+            "content": "@@ -20,327 +20,23 @@\n t (%0A\n-%09%22bufio%22%0A%09%22fmt%22%0A%09%22os%22%0A)%0A%0Afunc main() %7B%0A%09scanner := bufio.NewScanner(os.Stdin)%0A%09queue := NewQueue%5Bstring%5D()%0A%09for char := 'A'; ch %3C= 'P'; char++ %7B%0A%09%09queue.Enqueue(string(ch))%0A%09%7D%0A%0A%09for i := 0; i %3C 15; i++ %7B%0A%09%09scanner.Scan()%0A%09%09var j1, j2 int%0A%09%09fmt.Sscan(scanner.Text(), j1, j2)%0A%09t1:%0A%09%09queu.Dequeue()%0A%09t2:%0A%09%09queu.Dequeue()%0A%09%7D\n+)%0A%0Afunc main() %7B\n %0A%7D%0A\n",
+            "lines": "7"
+        },
+        {
+            "label": "2026-07-12_11-01-27",
+            "content": "@@ -294,16 +294,15 @@\n j2)%0A\n-%09\n %09t1\n- := \n+:%0A%09%09\n queu\n@@ -316,16 +316,15 @@\n e()%0A\n-%09\n %09t2\n- := \n+:%0A%09%09\n queu\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-07-12_11-01-39",
+            "content": "@@ -294,33 +294,32 @@\n j2)%0A%09%09t1 := queu\n-e\n .Dequeue()%0A%09%09t2 \n@@ -325,17 +325,16 @@\n  := queu\n-e\n .Dequeue\n@@ -340,80 +340,8 @@\n e()%0A\n-%09%09if j2 %3E j1 %7B%0A%09%09%09queue.Enqueue(t2)%0A%09%09%7D else %7B%0A%09%09%09queue.Enqueue(t1)%0A%09%09%7D%0A\n %09%7D%0A%7D\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-07-12_11-02-35",
+            "content": "@@ -143,18 +143,16 @@\n  'A'; ch\n-ar\n  %3C= 'P';\n@@ -190,16 +190,15 @@\n g(ch\n-ar\n ))%0A%09%7D%0A\n+%0A\n %09for\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-07-12_11-03-00",
+            "content": "@@ -420,36 +420,6 @@\n %0A%09%7D%0A\n-%09fmt.Println(queue.Dequeue())%0A\n %7D%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-07-12_11-03-35",
+            "content": "@@ -345,30 +345,8 @@\n e()%0A\n-%09%09fmt.Println(j2, j1)%0A\n %09%09if\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-07-12_11-04-34",
+            "content": "@@ -289,14 +289,12 @@\n (), \n-&\n j1, \n-&\n j2)%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-07-12_11-05-13",
+            "content": "@@ -343,16 +343,38 @@\n queue()%0A\n+%09%09fmt.Println(j2, j1)%0A\n %09%09if j2 \n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-07-12_11-05-24",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tqueue := NewQueue[string]()\n\tfor char := 'A'; char <= 'P'; char++ {\n\t\tqueue.Enqueue(string(char))\n\t}\n\tfor i := 0; i < 15; i++ {\n\t\tscanner.Scan()\n\t\tvar j1, j2 int\n\t\tfmt.Sscan(scanner.Text(), &j1, &j2)\n\t\tt1 := queue.Dequeue()\n\t\tt2 := queue.Dequeue()\n\t\tif j2 > j1 {\n\t\t\tqueue.Enqueue(t2)\n\t\t} else {\n\t\t\tqueue.Enqueue(t1)\n\t\t}\n\t}\n\tfmt.Println(queue.Dequeue())\n}\n",
+            "lines": "28"
+        }
+    ]
 }
