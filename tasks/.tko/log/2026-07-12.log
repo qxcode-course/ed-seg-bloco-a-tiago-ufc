@@ -391,3 +391,98 @@
 2026-07-12 17:29:45, MOVE, v:1, k:ed@caminho, mode:BACK
 2026-07-12 17:31:50, SELF, v:1, k:ed@caminho, self:1, rate:100, study:80, code:1
 2026-07-12 17:35:28, MOVE, v:1, k:ed@wordsearch, mode:DOWN
+2026-07-12 17:35:28, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-07-12 17:35:28, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-07-12 17:35:28, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-07-12 17:37:51, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-07-12 17:37:52, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-07-12 17:37:52, MOVE, v:1, k:ed@serial, mode:EDIT
+2026-07-12 17:37:52, MOVE, v:1, k:ed@serial, mode:EDIT
+2026-07-12 17:41:21, MOVE, v:1, k:ed@fractais_png, mode:PICK
+2026-07-12 17:41:36, MOVE, v:1, k:ed@fractais_png, mode:BACK
+2026-07-12 17:41:41, MOVE, v:1, k:ed@triangulo, mode:PICK
+2026-07-12 17:41:24, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-07-12 17:41:26, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-07-12 17:41:25, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-07-12 17:41:26, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-07-12 17:41:41, MOVE, v:1, k:ed@triangulo, mode:EDIT
+2026-07-12 17:44:28, MOVE, v:1, k:ed@triangulo, mode:EDIT
+2026-07-12 17:47:32, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:0, size:53
+2026-07-12 17:48:35, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:100, size:53
+2026-07-12 17:48:37, MOVE, v:1, k:ed@triangulo, mode:BACK
+2026-07-12 17:49:38, SELF, v:1, k:ed@triangulo, self:1, rate:100, study:12, concept:1, problem:1, refactor:1
+2026-07-12 17:49:48, SELF, v:1, k:ed@triangulo, self:1, rate:100, study:12, concept:1, problem:1
+2026-07-12 17:48:15, MOVE, v:1, k:ed@triangulo, mode:EDIT
+2026-07-12 17:48:34, MOVE, v:1, k:ed@triangulo, mode:EDIT
+2026-07-12 17:50:45, MOVE, v:1, k:ed@fractais_png, mode:PICK
+2026-07-12 17:50:47, MOVE, v:1, k:ed@fractais_png, mode:BACK
+2026-07-12 17:53:35, MOVE, v:1, k:ed@treinando, mode:DOWN
+2026-07-12 17:53:50, MOVE, v:1, k:ed@treinando, mode:PICK
+2026-07-12 17:55:32, MOVE, v:1, k:ed@treinando, mode:BACK
+2026-07-12 17:53:35, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-07-12 17:54:35, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-07-12 17:59:22, MOVE, v:1, k:ed@dfs_read, mode:DOWN
+2026-07-12 17:59:46, MOVE, v:1, k:ed@dfs_read, mode:PICK
+2026-07-12 18:00:28, MOVE, v:1, k:ed@dfs_read, mode:BACK
+2026-07-12 18:00:44, MOVE, v:1, k:ed@ilhas, mode:DOWN
+2026-07-12 18:01:23, MOVE, v:1, k:ed@ilhas, mode:PICK
+2026-07-12 17:59:49, MOVE, v:1, k:ed@dfs_read, mode:EDIT
+2026-07-12 18:00:44, MOVE, v:1, k:ed@ilhas, mode:EDIT
+2026-07-12 18:01:26, MOVE, v:1, k:ed@ilhas, mode:EDIT
+2026-07-12 18:02:27, MOVE, v:1, k:ed@ilhas, mode:EDIT
+2026-07-12 18:11:45, MOVE, v:1, k:ed@ilhas, mode:EDIT
+2026-07-12 18:13:30, MOVE, v:1, k:ed@ilhas, mode:BACK
+2026-07-12 18:13:33, MOVE, v:1, k:ed@ilhas, mode:PICK
+2026-07-12 18:16:23, EXEC, v:1, k:ed@ilhas, mode:FULL, size:72, fail:COMP
+2026-07-12 18:16:08, MOVE, v:1, k:ed@ilhas, mode:EDIT
+2026-07-12 18:20:06, EXEC, v:1, k:ed@ilhas, mode:FULL, rate:0, size:88
+2026-07-12 18:20:00, MOVE, v:1, k:ed@ilhas, mode:EDIT
+2026-07-12 18:20:05, MOVE, v:1, k:ed@ilhas, mode:EDIT
+2026-07-12 18:31:28, MOVE, v:1, k:ed@ilhas, mode:EDIT
+2026-07-12 18:32:44, EXEC, v:1, k:ed@ilhas, mode:FULL, size:53, fail:COMP
+2026-07-12 18:33:00, EXEC, v:1, k:ed@ilhas, mode:FULL, rate:100, size:54
+2026-07-12 18:33:38, MOVE, v:1, k:ed@ilhas, mode:BACK
+2026-07-12 18:34:01, SELF, v:1, k:ed@ilhas, self:1, rate:100, study:50, concept:1, problem:1, debug:1
+2026-07-12 18:34:14, MOVE, v:1, k:ed@cercado, mode:DOWN
+2026-07-12 18:34:32, MOVE, v:1, k:ed@cercado, mode:PICK
+2026-07-12 18:34:34, EXEC, v:1, k:ed@cercado, mode:FULL, rate:33, size:29
+2026-07-12 18:34:39, MOVE, v:1, k:ed@cercado, mode:BACK
+2026-07-12 18:34:48, MOVE, v:1, k:ed@cercado, mode:PICK
+2026-07-12 18:34:50, MOVE, v:1, k:ed@cercado, mode:BACK
+2026-07-12 18:36:05, MOVE, v:1, k:ed@cercado, mode:PICK
+2026-07-12 18:37:06, MOVE, v:1, k:ed@cercado, mode:BACK
+2026-07-12 18:37:36, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-07-12 18:37:55, MOVE, v:1, k:ed@wordsearch, mode:BACK
+2026-07-12 18:38:00, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-07-12 18:40:43, MOVE, v:1, k:ed@wordsearch, mode:BACK
+2026-07-12 18:41:14, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-07-12 18:41:51, MOVE, v:1, k:ed@wordsearch, mode:BACK
+2026-07-12 18:44:21, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-07-12 18:44:27, MOVE, v:1, k:ed@wordsearch, mode:BACK
+2026-07-12 18:44:36, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-07-12 18:44:48, MOVE, v:1, k:ed@wordsearch, mode:BACK
+2026-07-12 18:46:09, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-07-12 18:49:48, MOVE, v:1, k:ed@wordsearch, mode:BACK
+2026-07-12 18:50:57, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-07-12 18:51:10, MOVE, v:1, k:ed@wordsearch, mode:BACK
+2026-07-12 18:52:36, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-07-12 21:45:28, MOVE, v:1, k:ed@wordsearch, mode:BACK
+2026-07-12 21:46:38, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-07-12 21:46:42, MOVE, v:1, k:ed@wordsearch, mode:BACK
+2026-07-12 21:46:44, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-07-12 21:46:38, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-07-12 21:46:38, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-07-12 21:46:48, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-07-12 21:51:17, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-07-12 21:56:22, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-07-12 21:59:00, EXEC, v:1, k:ed@wordsearch, mode:FULL, size:100, fail:COMP
+2026-07-12 21:59:24, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:100, size:100
+2026-07-12 21:59:33, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:100
+2026-07-12 21:59:42, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:100
+2026-07-12 21:59:54, MOVE, v:1, k:ed@wordsearch, mode:BACK
+2026-07-12 22:00:35, SELF, v:1, k:ed@wordsearch, self:1, rate:100, study:80, concept:1, problem:1, code:1
+2026-07-12 22:01:04, SELF, v:1, k:ed@wordsearch, self:1, rate:100, study:80, concept:1, code:1
+2026-07-12 21:59:30, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-07-12 21:59:42, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-07-12 22:04:04, MOVE, v:1, k:ed@treinando, mode:PICK
+2026-07-12 22:05:08, MOVE, v:1, k:ed@treinando, mode:BACK

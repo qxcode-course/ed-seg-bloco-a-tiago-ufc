@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-12_21-59-00",
+            "content": "@@ -363,16 +363,19 @@\n %09%09%7D%0A%09%7D%0A%09\n+// \n return f\n@@ -851,16 +851,19 @@\n = temp%0A%09\n+// \n return f\n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-07-12_21-59-23",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\ntype Pos struct {\n\tl, c int\n}\n\n// N\u00e3o mude a assinatura desta fun\u00e7\u00e3o, ela \u00e9 a fun\u00e7\u00e3o chamada pelo LeetCode\nfunc exist(grid [][]rune, word string) bool {\n\tnRows := len(grid)\n\tnCols := len(grid[0])\n\tfor r := 0; r < nRows; r++ {\n\t\tfor c := 0; c < nCols; c++ {\n\t\t\tif backtrack(grid, r, c, word) {\n\t\t\t\treturn true\n\t\t\t}\n\t\t}\n\t}\n\treturn false\n}\n\nfunc backtrack(grid [][]rune, row, col int, suffix string) bool {\n\tif len(suffix) == 0 {\n\t\treturn true\n\t}\n\tif row < 0 || row >= len(grid) ||\n\t\tcol < 0 || col >= len(grid[0]) ||\n\t\tgrid[row][col] != rune(suffix[0]) {\n\t\treturn false\n\t}\n\ttemp := grid[row][col]\n\tgrid[row][col] = '#'\n\tdirs := [][]int{\n\t\t{0, 1},\n\t\t{1, 0},\n\t\t{0, -1},\n\t\t{-1, 0},\n\t}\n\tfor _, d := range dirs {\n\t\tif backtrack(grid, row+d[0], col+d[1], suffix[1:]) {\n\t\t\treturn true\n\t\t}\n\t}\n\tgrid[row][col] = temp\n\treturn false\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tvar word string\n\tfmt.Sscanf(scanner.Text(), \"%s\", &word)\n\tgrid := make([][]rune, 0)\n\tfor scanner.Scan() {\n\t\tgrid = append(grid, []rune(scanner.Text()))\n\t}\n\tif exist(grid, word) {\n\t\tfmt.Println(\"true\")\n\t} else {\n\t\tfmt.Println(\"false\")\n\t}\n}\n",
+            "lines": "67"
+        }
+    ]
+}

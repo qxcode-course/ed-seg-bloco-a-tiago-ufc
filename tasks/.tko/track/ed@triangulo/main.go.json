@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-12_17-47-32",
+            "content": "@@ -305,17 +305,16 @@\n tf(%22%5B %25s\n- \n %5D%5Cn%22, Jo\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-07-12_17-48-35",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc processa(vet []int) {\n\t_ = vet\n\tif len(vet) == 1 {\n\t\tfmt.Printf(\"[ %d ]\\n\", vet[0])\n\t\treturn\n\t}\n\tvetAux := make([]int, len(vet)-1)\n\tfor i := 0; i < len(vetAux); i++ {\n\t\tvetAux[i] = vet[i] + vet[i+1]\n\t}\n\tprocessa(vetAux)\n\tfmt.Printf(\"[ %s ]\\n\", Join(vet, \" \"))\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tif !scanner.Scan() {\n\t\treturn\n\t}\n\tline := scanner.Text()\n\tparts := strings.Fields(line)\n\tvet := []int{}\n\tfor _, part := range parts {\n\t\tif value, err := strconv.Atoi(part); err == nil {\n\t\t\tvet = append(vet, value)\n\t\t}\n\t}\n\tprocessa(vet)\n}\n\nfunc Join[T any](v []T, sep string) string {\n\tif len(v) == 0 {\n\t\treturn \"\"\n\t}\n\ts := \"\"\n\tfor i, x := range v {\n\t\tif i > 0 {\n\t\t\ts += sep\n\t\t}\n\t\ts += fmt.Sprintf(\"%v\", x)\n\t}\n\treturn s\n}\n",
+            "lines": "53"
+        }
+    ]
+}
