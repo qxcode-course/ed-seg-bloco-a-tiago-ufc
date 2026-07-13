@@ -12,7 +12,8 @@ sources:
   type: local
   writeable: true
   quests: null
-expanded: []
+expanded:
+- ed@tree
 flags:
   inbox: all
   panel: skills
@@ -22,5 +23,5 @@ audit:
   enabled: true
   interval_seconds: null
 lang: go
-selected: ed@rec
-selected_index: 2
+selected: ed@bst_insert
+selected_index: 16
