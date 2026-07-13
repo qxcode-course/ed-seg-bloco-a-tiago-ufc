@@ -1,1 +1,2 @@
 {"ts":1783889962,"hash":"db3b03f6fbe0dc132b6c32a2c7aa83378f95cb6a1a54ff9c1f1243dd3ad41413","mode":"full","content":"H4sIAC4AVGoC/ytITM5OTE9VyE3MzOPKzC3ILypRUErLLVHiSivNSwYLa2gqVHMpAAFQWC+gKDOvJCdPQ8kjNScnX0chPL8oJ0VRSZOrlgsAdYpEcEsAAAA="}
+{"ts":1783911277,"hash":"43c195d8f94469d66631e97f40d4b8264b4bdc08af63d0c83dc0d714d7110630","mode":"diff","ops":[{"tag":"insert","a1":1,"a2":1,"text":"\n"},{"tag":"insert","a1":2,"a2":2,"text":"\n"},{"tag":"replace","a1":3,"a2":4,"text":"\tfmt.Println(\"Hello, World!\")\n"}]}

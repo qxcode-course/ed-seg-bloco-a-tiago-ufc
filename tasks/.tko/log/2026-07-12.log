@@ -598,3 +598,10 @@
 2026-07-12 23:48:45, EXEC, v:1, k:ed@bst_remove, mode:FULL, rate:100
 2026-07-12 23:48:59, MOVE, v:1, k:ed@bst_remove, mode:BACK
 2026-07-12 23:50:25, SELF, v:1, k:ed@bst_remove, self:1, rate:100, study:30, concept:1, problem:1
+2026-07-12 23:54:08, MOVE, v:1, k:ed@dfs_read, mode:PICK
+2026-07-12 23:54:11, EXEC, v:1, k:ed@dfs_read, mode:LOCK, rate:0, size:5
+2026-07-12 23:54:13, MOVE, v:1, k:ed@dfs_read, mode:BACK
+2026-07-12 23:54:18, MOVE, v:1, k:ed@dfs_read, mode:PICK
+2026-07-12 23:54:58, MOVE, v:1, k:ed@dfs_read, mode:BACK
+2026-07-12 23:55:02, MOVE, v:1, k:ed@ilhas, mode:PICK
+2026-07-12 23:56:00, MOVE, v:1, k:ed@ilhas, mode:BACK

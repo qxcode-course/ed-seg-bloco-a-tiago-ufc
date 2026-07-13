@@ -12,15 +12,16 @@ sources:
   type: local
   writeable: true
   quests: null
-expanded: []
+expanded:
+- ed@dfs
 flags:
   inbox: all
-  panel: skills
+  panel: graph
   task_graph_mode: time
   show_time: 'true'
 audit:
   enabled: true
   interval_seconds: null
 lang: go
-selected: ed@linear
-selected_index: 5
+selected: ed@ilhas
+selected_index: 10
